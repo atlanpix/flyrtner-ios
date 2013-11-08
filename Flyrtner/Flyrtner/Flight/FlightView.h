@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FlightCell.h"
+#import "FlyrtnerApi.h"
+#import "Flight.h"
+#import "ChatView.h"
 
-@interface FlightView : UITableViewController
+@interface FlightView : UIViewController<UITableViewDataSource,UITableViewDelegate,NSURLConnectionDataDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *flightTable;
 
 @end

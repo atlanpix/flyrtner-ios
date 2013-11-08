@@ -10,4 +10,8 @@
 
 @interface FlightCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *flightNumber;
+@property (weak, nonatomic) IBOutlet UILabel *origin;
+@property (weak, nonatomic) IBOutlet UILabel *destination;
+
 @end

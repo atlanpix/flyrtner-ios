@@ -24,7 +24,37 @@
 		E5192F5F182D66FB00FD21A8 /* FlyrtnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5192F5E182D66FB00FD21A8 /* FlyrtnerTests.m */; };
 		E5192F69182D67DE00FD21A8 /* Flyrtner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5192F68182D67DE00FD21A8 /* Flyrtner.storyboard */; };
 		E5192F6D182D6BB800FD21A8 /* FlightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5192F6C182D6BB800FD21A8 /* FlightCell.m */; };
-		E5192F70182D6BE600FD21A8 /* FlightView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5192F6F182D6BE600FD21A8 /* FlightView.m */; };
+		E5192F7B182D6F2800FD21A8 /* FlightView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5192F7A182D6F2800FD21A8 /* FlightView.m */; };
+		E5192F8C182D717700FD21A8 /* BaseApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E5192F87182D717700FD21A8 /* BaseApi.m */; };
+		E5192F8D182D717700FD21A8 /* ChatApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E5192F89182D717700FD21A8 /* ChatApi.m */; };
+		E5192F8E182D717700FD21A8 /* FlyrtnerApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E5192F8B182D717700FD21A8 /* FlyrtnerApi.m */; };
+		E5192F91182D719B00FD21A8 /* Definitions.m in Sources */ = {isa = PBXBuildFile; fileRef = E5192F90182D719B00FD21A8 /* Definitions.m */; };
+		E5192FA6182D807F00FD21A8 /* DBUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E5192FA5182D807F00FD21A8 /* DBUser.m */; };
+		E5192FA9182D808000FD21A8 /* DBChat.m in Sources */ = {isa = PBXBuildFile; fileRef = E5192FA8182D808000FD21A8 /* DBChat.m */; };
+		E5192FAC182D808000FD21A8 /* DBFlight.m in Sources */ = {isa = PBXBuildFile; fileRef = E5192FAB182D808000FD21A8 /* DBFlight.m */; };
+		E5192FAF182D808000FD21A8 /* DBAd.m in Sources */ = {isa = PBXBuildFile; fileRef = E5192FAE182D808000FD21A8 /* DBAd.m */; };
+		E5192FB2182D808000FD21A8 /* DBMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = E5192FB1182D808000FD21A8 /* DBMessage.m */; };
+		E5192FB6182D809F00FD21A8 /* Flight.m in Sources */ = {isa = PBXBuildFile; fileRef = E5192FB5182D809F00FD21A8 /* Flight.m */; };
+		E5192FB9182D94B400FD21A8 /* person-anonymous.png in Resources */ = {isa = PBXBuildFile; fileRef = E5192FB7182D94B400FD21A8 /* person-anonymous.png */; };
+		E5192FBA182D94B400FD21A8 /* pink.png in Resources */ = {isa = PBXBuildFile; fileRef = E5192FB8182D94B400FD21A8 /* pink.png */; };
+		E5192FBD182D950600FD21A8 /* black.png in Resources */ = {isa = PBXBuildFile; fileRef = E5192FBB182D950600FD21A8 /* black.png */; };
+		E5192FBE182D950600FD21A8 /* white.png in Resources */ = {isa = PBXBuildFile; fileRef = E5192FBC182D950600FD21A8 /* white.png */; };
+		E5192FC1182D955500FD21A8 /* PeopleView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5192FC0182D955500FD21A8 /* PeopleView.m */; };
+		E5192FC7182D95C100FD21A8 /* ChatView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5192FC6182D95C100FD21A8 /* ChatView.m */; };
+		E5192FD1182D96B000FD21A8 /* ConversationView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5192FD0182D96B000FD21A8 /* ConversationView.m */; };
+		E5192FD4182D96C900FD21A8 /* ConversationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5192FD3182D96C900FD21A8 /* ConversationCell.m */; };
+		E5192FD7182D96E600FD21A8 /* TaxiCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5192FD6182D96E600FD21A8 /* TaxiCell.m */; };
+		E5192FDA182D96FD00FD21A8 /* TaxiView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5192FD9182D96FD00FD21A8 /* TaxiView.m */; };
+		E5192FDF182D98B700FD21A8 /* icon-chat.png in Resources */ = {isa = PBXBuildFile; fileRef = E5192FDC182D98B700FD21A8 /* icon-chat.png */; };
+		E5192FE0182D98B700FD21A8 /* icon-people.png in Resources */ = {isa = PBXBuildFile; fileRef = E5192FDD182D98B700FD21A8 /* icon-people.png */; };
+		E5192FE1182D98B700FD21A8 /* icon-taxi.png in Resources */ = {isa = PBXBuildFile; fileRef = E5192FDE182D98B700FD21A8 /* icon-taxi.png */; };
+		E5192FE9182D9A4F00FD21A8 /* icon-chat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5192FE6182D9A4F00FD21A8 /* icon-chat@2x.png */; };
+		E5192FEA182D9A4F00FD21A8 /* icon-people@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5192FE7182D9A4F00FD21A8 /* icon-people@2x.png */; };
+		E5192FEB182D9A4F00FD21A8 /* icon-taxi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5192FE8182D9A4F00FD21A8 /* icon-taxi@2x.png */; };
+		E5192FEE182D9F7900FD21A8 /* Taxi.m in Sources */ = {isa = PBXBuildFile; fileRef = E5192FED182D9F7900FD21A8 /* Taxi.m */; };
+		E5192FF1182D9FF100FD21A8 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = E5192FF0182D9FF100FD21A8 /* Person.m */; };
+		E5192FF7182DA0C100FD21A8 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = E5192FF6182DA0C100FD21A8 /* Message.m */; };
+		E5192FFA182DA2C000FD21A8 /* PeopleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5192FF9182DA2C000FD21A8 /* PeopleCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,8 +89,58 @@
 		E5192F68182D67DE00FD21A8 /* Flyrtner.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Flyrtner.storyboard; sourceTree = "<group>"; };
 		E5192F6B182D6BB800FD21A8 /* FlightCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlightCell.h; path = Flight/FlightCell.h; sourceTree = "<group>"; };
 		E5192F6C182D6BB800FD21A8 /* FlightCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlightCell.m; path = Flight/FlightCell.m; sourceTree = "<group>"; };
-		E5192F6E182D6BE600FD21A8 /* FlightView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlightView.h; path = Flight/FlightView.h; sourceTree = "<group>"; };
-		E5192F6F182D6BE600FD21A8 /* FlightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlightView.m; path = Flight/FlightView.m; sourceTree = "<group>"; };
+		E5192F79182D6F2800FD21A8 /* FlightView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlightView.h; path = Flight/FlightView.h; sourceTree = "<group>"; };
+		E5192F7A182D6F2800FD21A8 /* FlightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlightView.m; path = Flight/FlightView.m; sourceTree = "<group>"; };
+		E5192F86182D717700FD21A8 /* BaseApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseApi.h; path = API/BaseApi.h; sourceTree = "<group>"; };
+		E5192F87182D717700FD21A8 /* BaseApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseApi.m; path = API/BaseApi.m; sourceTree = "<group>"; };
+		E5192F88182D717700FD21A8 /* ChatApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChatApi.h; path = API/ChatApi.h; sourceTree = "<group>"; };
+		E5192F89182D717700FD21A8 /* ChatApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChatApi.m; path = API/ChatApi.m; sourceTree = "<group>"; };
+		E5192F8A182D717700FD21A8 /* FlyrtnerApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlyrtnerApi.h; path = API/FlyrtnerApi.h; sourceTree = "<group>"; };
+		E5192F8B182D717700FD21A8 /* FlyrtnerApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlyrtnerApi.m; path = API/FlyrtnerApi.m; sourceTree = "<group>"; };
+		E5192F8F182D719B00FD21A8 /* Definitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Definitions.h; sourceTree = "<group>"; };
+		E5192F90182D719B00FD21A8 /* Definitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Definitions.m; sourceTree = "<group>"; };
+		E5192FA4182D807F00FD21A8 /* DBUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBUser.h; path = DataBase/DBUser.h; sourceTree = "<group>"; };
+		E5192FA5182D807F00FD21A8 /* DBUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBUser.m; path = DataBase/DBUser.m; sourceTree = "<group>"; };
+		E5192FA7182D808000FD21A8 /* DBChat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBChat.h; path = DataBase/DBChat.h; sourceTree = "<group>"; };
+		E5192FA8182D808000FD21A8 /* DBChat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBChat.m; path = DataBase/DBChat.m; sourceTree = "<group>"; };
+		E5192FAA182D808000FD21A8 /* DBFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBFlight.h; path = DataBase/DBFlight.h; sourceTree = "<group>"; };
+		E5192FAB182D808000FD21A8 /* DBFlight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBFlight.m; path = DataBase/DBFlight.m; sourceTree = "<group>"; };
+		E5192FAD182D808000FD21A8 /* DBAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBAd.h; path = DataBase/DBAd.h; sourceTree = "<group>"; };
+		E5192FAE182D808000FD21A8 /* DBAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBAd.m; path = DataBase/DBAd.m; sourceTree = "<group>"; };
+		E5192FB0182D808000FD21A8 /* DBMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBMessage.h; path = DataBase/DBMessage.h; sourceTree = "<group>"; };
+		E5192FB1182D808000FD21A8 /* DBMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBMessage.m; path = DataBase/DBMessage.m; sourceTree = "<group>"; };
+		E5192FB4182D809F00FD21A8 /* Flight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Flight.h; path = Model/Flight.h; sourceTree = "<group>"; };
+		E5192FB5182D809F00FD21A8 /* Flight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Flight.m; path = Model/Flight.m; sourceTree = "<group>"; };
+		E5192FB7182D94B400FD21A8 /* person-anonymous.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "person-anonymous.png"; path = "Resources/Images/person-anonymous.png"; sourceTree = "<group>"; };
+		E5192FB8182D94B400FD21A8 /* pink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pink.png; path = Resources/Images/pink.png; sourceTree = "<group>"; };
+		E5192FBB182D950600FD21A8 /* black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = black.png; path = Resources/Images/black.png; sourceTree = "<group>"; };
+		E5192FBC182D950600FD21A8 /* white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = white.png; path = Resources/Images/white.png; sourceTree = "<group>"; };
+		E5192FBF182D955500FD21A8 /* PeopleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleView.h; path = People/PeopleView.h; sourceTree = "<group>"; };
+		E5192FC0182D955500FD21A8 /* PeopleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleView.m; path = People/PeopleView.m; sourceTree = "<group>"; };
+		E5192FC5182D95C100FD21A8 /* ChatView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChatView.h; path = Chat/ChatView.h; sourceTree = "<group>"; };
+		E5192FC6182D95C100FD21A8 /* ChatView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChatView.m; path = Chat/ChatView.m; sourceTree = "<group>"; };
+		E5192FCF182D96B000FD21A8 /* ConversationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConversationView.h; path = Conversation/ConversationView.h; sourceTree = "<group>"; };
+		E5192FD0182D96B000FD21A8 /* ConversationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConversationView.m; path = Conversation/ConversationView.m; sourceTree = "<group>"; };
+		E5192FD2182D96C900FD21A8 /* ConversationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConversationCell.h; path = Conversation/ConversationCell.h; sourceTree = "<group>"; };
+		E5192FD3182D96C900FD21A8 /* ConversationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConversationCell.m; path = Conversation/ConversationCell.m; sourceTree = "<group>"; };
+		E5192FD5182D96E600FD21A8 /* TaxiCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TaxiCell.h; path = Taxi/TaxiCell.h; sourceTree = "<group>"; };
+		E5192FD6182D96E600FD21A8 /* TaxiCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TaxiCell.m; path = Taxi/TaxiCell.m; sourceTree = "<group>"; };
+		E5192FD8182D96FD00FD21A8 /* TaxiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TaxiView.h; path = Taxi/TaxiView.h; sourceTree = "<group>"; };
+		E5192FD9182D96FD00FD21A8 /* TaxiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TaxiView.m; path = Taxi/TaxiView.m; sourceTree = "<group>"; };
+		E5192FDC182D98B700FD21A8 /* icon-chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-chat.png"; path = "Resources/Images/icon-chat.png"; sourceTree = "<group>"; };
+		E5192FDD182D98B700FD21A8 /* icon-people.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-people.png"; path = "Resources/Images/icon-people.png"; sourceTree = "<group>"; };
+		E5192FDE182D98B700FD21A8 /* icon-taxi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-taxi.png"; path = "Resources/Images/icon-taxi.png"; sourceTree = "<group>"; };
+		E5192FE6182D9A4F00FD21A8 /* icon-chat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-chat@2x.png"; path = "Resources/Images/icon-chat@2x.png"; sourceTree = "<group>"; };
+		E5192FE7182D9A4F00FD21A8 /* icon-people@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-people@2x.png"; path = "Resources/Images/icon-people@2x.png"; sourceTree = "<group>"; };
+		E5192FE8182D9A4F00FD21A8 /* icon-taxi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-taxi@2x.png"; path = "Resources/Images/icon-taxi@2x.png"; sourceTree = "<group>"; };
+		E5192FEC182D9F7900FD21A8 /* Taxi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Taxi.h; path = Model/Taxi.h; sourceTree = "<group>"; };
+		E5192FED182D9F7900FD21A8 /* Taxi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Taxi.m; path = Model/Taxi.m; sourceTree = "<group>"; };
+		E5192FEF182D9FF100FD21A8 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Person.h; path = Model/Person.h; sourceTree = "<group>"; };
+		E5192FF0182D9FF100FD21A8 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Person.m; path = Model/Person.m; sourceTree = "<group>"; };
+		E5192FF5182DA0C100FD21A8 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Message.h; path = Model/Message.h; sourceTree = "<group>"; };
+		E5192FF6182DA0C100FD21A8 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Message.m; path = Model/Message.m; sourceTree = "<group>"; };
+		E5192FF8182DA2C000FD21A8 /* PeopleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleCell.h; path = People/PeopleCell.h; sourceTree = "<group>"; };
+		E5192FF9182DA2C000FD21A8 /* PeopleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleCell.m; path = People/PeopleCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,13 +203,18 @@
 		E5192F3B182D66FB00FD21A8 /* Flyrtner */ = {
 			isa = PBXGroup;
 			children = (
-				E5192F6A182D6B7700FD21A8 /* Flight */,
+				E5192FB3182D808400FD21A8 /* Model */,
+				E5192FA3182D806200FD21A8 /* DataBase */,
+				E5192F92182D7FBD00FD21A8 /* Controllers */,
+				E5192F7C182D70C900FD21A8 /* API */,
 				E5192F44182D66FB00FD21A8 /* AppDelegate.h */,
 				E5192F45182D66FB00FD21A8 /* AppDelegate.m */,
 				E5192F4A182D66FB00FD21A8 /* Images.xcassets */,
-				E5192F47182D66FB00FD21A8 /* Flyrtner.xcdatamodeld */,
 				E5192F3C182D66FB00FD21A8 /* Supporting Files */,
 				E5192F68182D67DE00FD21A8 /* Flyrtner.storyboard */,
+				E5192F8F182D719B00FD21A8 /* Definitions.h */,
+				E5192F90182D719B00FD21A8 /* Definitions.m */,
+				E5192F74182D6D3800FD21A8 /* Resources */,
 			);
 			path = Flyrtner;
 			sourceTree = "<group>";
@@ -168,10 +253,143 @@
 			children = (
 				E5192F6B182D6BB800FD21A8 /* FlightCell.h */,
 				E5192F6C182D6BB800FD21A8 /* FlightCell.m */,
-				E5192F6E182D6BE600FD21A8 /* FlightView.h */,
-				E5192F6F182D6BE600FD21A8 /* FlightView.m */,
+				E5192F79182D6F2800FD21A8 /* FlightView.h */,
+				E5192F7A182D6F2800FD21A8 /* FlightView.m */,
 			);
 			name = Flight;
+			sourceTree = "<group>";
+		};
+		E5192F71182D6CF300FD21A8 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				E5192FC5182D95C100FD21A8 /* ChatView.h */,
+				E5192FC6182D95C100FD21A8 /* ChatView.m */,
+			);
+			name = Chat;
+			sourceTree = "<group>";
+		};
+		E5192F72182D6D0700FD21A8 /* Taxi */ = {
+			isa = PBXGroup;
+			children = (
+				E5192FD5182D96E600FD21A8 /* TaxiCell.h */,
+				E5192FD6182D96E600FD21A8 /* TaxiCell.m */,
+				E5192FD8182D96FD00FD21A8 /* TaxiView.h */,
+				E5192FD9182D96FD00FD21A8 /* TaxiView.m */,
+			);
+			name = Taxi;
+			sourceTree = "<group>";
+		};
+		E5192F73182D6D1100FD21A8 /* People */ = {
+			isa = PBXGroup;
+			children = (
+				E5192FF8182DA2C000FD21A8 /* PeopleCell.h */,
+				E5192FF9182DA2C000FD21A8 /* PeopleCell.m */,
+				E5192FBF182D955500FD21A8 /* PeopleView.h */,
+				E5192FC0182D955500FD21A8 /* PeopleView.m */,
+			);
+			name = People;
+			sourceTree = "<group>";
+		};
+		E5192F74182D6D3800FD21A8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E5192F75182D6D4000FD21A8 /* Images */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		E5192F75182D6D4000FD21A8 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				E5192FDB182D98A300FD21A8 /* Icons */,
+				E5192FBB182D950600FD21A8 /* black.png */,
+				E5192FBC182D950600FD21A8 /* white.png */,
+				E5192FB7182D94B400FD21A8 /* person-anonymous.png */,
+				E5192FB8182D94B400FD21A8 /* pink.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		E5192F7C182D70C900FD21A8 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				E5192F86182D717700FD21A8 /* BaseApi.h */,
+				E5192F87182D717700FD21A8 /* BaseApi.m */,
+				E5192F88182D717700FD21A8 /* ChatApi.h */,
+				E5192F89182D717700FD21A8 /* ChatApi.m */,
+				E5192F8A182D717700FD21A8 /* FlyrtnerApi.h */,
+				E5192F8B182D717700FD21A8 /* FlyrtnerApi.m */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		E5192F92182D7FBD00FD21A8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E5192FCB182D964700FD21A8 /* Conversation */,
+				E5192F72182D6D0700FD21A8 /* Taxi */,
+				E5192F71182D6CF300FD21A8 /* Chat */,
+				E5192F6A182D6B7700FD21A8 /* Flight */,
+				E5192F73182D6D1100FD21A8 /* People */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		E5192FA3182D806200FD21A8 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				E5192F47182D66FB00FD21A8 /* Flyrtner.xcdatamodeld */,
+				E5192FB0182D808000FD21A8 /* DBMessage.h */,
+				E5192FB1182D808000FD21A8 /* DBMessage.m */,
+				E5192FAD182D808000FD21A8 /* DBAd.h */,
+				E5192FAE182D808000FD21A8 /* DBAd.m */,
+				E5192FAA182D808000FD21A8 /* DBFlight.h */,
+				E5192FAB182D808000FD21A8 /* DBFlight.m */,
+				E5192FA7182D808000FD21A8 /* DBChat.h */,
+				E5192FA8182D808000FD21A8 /* DBChat.m */,
+				E5192FA4182D807F00FD21A8 /* DBUser.h */,
+				E5192FA5182D807F00FD21A8 /* DBUser.m */,
+			);
+			name = DataBase;
+			sourceTree = "<group>";
+		};
+		E5192FB3182D808400FD21A8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E5192FF5182DA0C100FD21A8 /* Message.h */,
+				E5192FF6182DA0C100FD21A8 /* Message.m */,
+				E5192FB4182D809F00FD21A8 /* Flight.h */,
+				E5192FB5182D809F00FD21A8 /* Flight.m */,
+				E5192FEC182D9F7900FD21A8 /* Taxi.h */,
+				E5192FED182D9F7900FD21A8 /* Taxi.m */,
+				E5192FEF182D9FF100FD21A8 /* Person.h */,
+				E5192FF0182D9FF100FD21A8 /* Person.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E5192FCB182D964700FD21A8 /* Conversation */ = {
+			isa = PBXGroup;
+			children = (
+				E5192FD2182D96C900FD21A8 /* ConversationCell.h */,
+				E5192FD3182D96C900FD21A8 /* ConversationCell.m */,
+				E5192FCF182D96B000FD21A8 /* ConversationView.h */,
+				E5192FD0182D96B000FD21A8 /* ConversationView.m */,
+			);
+			name = Conversation;
+			sourceTree = "<group>";
+		};
+		E5192FDB182D98A300FD21A8 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				E5192FE6182D9A4F00FD21A8 /* icon-chat@2x.png */,
+				E5192FE7182D9A4F00FD21A8 /* icon-people@2x.png */,
+				E5192FE8182D9A4F00FD21A8 /* icon-taxi@2x.png */,
+				E5192FDC182D98B700FD21A8 /* icon-chat.png */,
+				E5192FDD182D98B700FD21A8 /* icon-people.png */,
+				E5192FDE182D98B700FD21A8 /* icon-taxi.png */,
+			);
+			name = Icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,9 +467,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5192FB9182D94B400FD21A8 /* person-anonymous.png in Resources */,
+				E5192FBA182D94B400FD21A8 /* pink.png in Resources */,
+				E5192FE1182D98B700FD21A8 /* icon-taxi.png in Resources */,
 				E5192F40182D66FB00FD21A8 /* InfoPlist.strings in Resources */,
+				E5192FE9182D9A4F00FD21A8 /* icon-chat@2x.png in Resources */,
 				E5192F69182D67DE00FD21A8 /* Flyrtner.storyboard in Resources */,
 				E5192F4B182D66FB00FD21A8 /* Images.xcassets in Resources */,
+				E5192FBE182D950600FD21A8 /* white.png in Resources */,
+				E5192FDF182D98B700FD21A8 /* icon-chat.png in Resources */,
+				E5192FEB182D9A4F00FD21A8 /* icon-taxi@2x.png in Resources */,
+				E5192FBD182D950600FD21A8 /* black.png in Resources */,
+				E5192FEA182D9A4F00FD21A8 /* icon-people@2x.png in Resources */,
+				E5192FE0182D98B700FD21A8 /* icon-people.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,11 +498,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5192FC7182D95C100FD21A8 /* ChatView.m in Sources */,
+				E5192FAF182D808000FD21A8 /* DBAd.m in Sources */,
 				E5192F46182D66FB00FD21A8 /* AppDelegate.m in Sources */,
+				E5192FAC182D808000FD21A8 /* DBFlight.m in Sources */,
+				E5192FB2182D808000FD21A8 /* DBMessage.m in Sources */,
+				E5192F8C182D717700FD21A8 /* BaseApi.m in Sources */,
+				E5192FD1182D96B000FD21A8 /* ConversationView.m in Sources */,
+				E5192FD4182D96C900FD21A8 /* ConversationCell.m in Sources */,
 				E5192F6D182D6BB800FD21A8 /* FlightCell.m in Sources */,
+				E5192F91182D719B00FD21A8 /* Definitions.m in Sources */,
+				E5192FC1182D955500FD21A8 /* PeopleView.m in Sources */,
+				E5192FA6182D807F00FD21A8 /* DBUser.m in Sources */,
+				E5192FF7182DA0C100FD21A8 /* Message.m in Sources */,
+				E5192FDA182D96FD00FD21A8 /* TaxiView.m in Sources */,
+				E5192FEE182D9F7900FD21A8 /* Taxi.m in Sources */,
+				E5192FD7182D96E600FD21A8 /* TaxiCell.m in Sources */,
+				E5192FB6182D809F00FD21A8 /* Flight.m in Sources */,
+				E5192F8E182D717700FD21A8 /* FlyrtnerApi.m in Sources */,
+				E5192FA9182D808000FD21A8 /* DBChat.m in Sources */,
+				E5192FF1182D9FF100FD21A8 /* Person.m in Sources */,
 				E5192F42182D66FB00FD21A8 /* main.m in Sources */,
 				E5192F49182D66FB00FD21A8 /* Flyrtner.xcdatamodeld in Sources */,
-				E5192F70182D6BE600FD21A8 /* FlightView.m in Sources */,
+				E5192F8D182D717700FD21A8 /* ChatApi.m in Sources */,
+				E5192F7B182D6F2800FD21A8 /* FlightView.m in Sources */,
+				E5192FFA182DA2C000FD21A8 /* PeopleCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

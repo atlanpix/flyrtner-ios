@@ -8,15 +8,20 @@
 
 #import "FlightView.h"
 
-@interface FlightView ()
+@interface FlightView (){
+    FlyrtnerApi *flyrtnerAPI;
+    NSMutableArray *flights;
+}
 
 @end
 
 @implementation FlightView
 
-- (id)initWithStyle:(UITableViewStyle)style
+@synthesize flightTable;
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithStyle:style];
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
     }
@@ -26,12 +31,37 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+	// Do any additional setup after loading the view.
+    
+    // Put delegates to flight table
+    [flightTable setDataSource:self];
+	[flightTable setDelegate:self];
+    
+    // Init flights
+    flights = [[NSMutableArray alloc] init];
+    
+    /*[flyrtnerAPI getFlights:@"0"
+                   calledBy:self
+                withSuccess:@selector(getFlightsDidEnd:)];*/
+    
+    Flight *flightExample1 = [[Flight alloc]init];
+    flightExample1.flightNumber = @"VY1190";
+    flightExample1.origin = @"LGW";
+    flightExample1.destination = @"BCN";
+    
+    Flight *flightExample2 = [[Flight alloc]init];
+    flightExample2.flightNumber = @"VY7101";
+    flightExample2.origin = @"TFE";
+    flightExample2.destination = @"LPA";
+    
+    Flight *flightExample3 = [[Flight alloc]init];
+    flightExample3.flightNumber = @"VY1961";
+    flightExample3.origin = @"LND";
+    flightExample3.destination = @"LPA";
+    
+    [flights addObject:flightExample1];
+    [flights addObject:flightExample2];
+    [flights addObject:flightExample3];
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,81 +70,85 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
+#pragma mark Table methods
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+// Funciones obligatorias para als tablas
+// define el número de secciones de la tabla
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    // Configure the cell...
+    return [flights count];
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+	//Tabla de la guia
+    FlightCell *cell = (FlightCell *)[flightTable dequeueReusableCellWithIdentifier:@"flight" forIndexPath:indexPath];
+    
+    if (!cell) {
+        cell = [[FlightCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"flight"];
+    }
+    
+    Flight *flight = [flights objectAtIndex:indexPath.row];
+    
+    cell.origin.text = flight.origin;
+    cell.destination.text = flight.destination;
+    cell.flightNumber.text = flight.flightNumber;
+    
+//    [cell.channelImage setImageWithURL:[NSURL URLWithString:c.imageURL]
+//                      placeholderImage:[UIImage imageNamed:[c.imageURL
+//                                                            stringByReplacingOccurrencesOfString:@"http://estrelladamm.vuqio.com/static/channels/p/" withString:@""]]
+//                             completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
+//                                 //... completion code here ...
+//                             }];
+//    NSString *userId = [appCore getUserId];
+//    if (userId){
+//        [flyrtnerAPI getUsersFlight:flight.flightNumber
+//                             userId:userId
+//                               view:cell
+//                           calledBy:self
+//                        withSuccess:@selector(getUsersFlight:view:)];
+//    }
     
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
+// Fin de funciones para rellenar la tabla
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
+#pragma mark -
+#pragma mark Segue
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
 
-/*
-#pragma mark - Navigation
-
-// In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+	if([[segue identifier]isEqualToString:@"toFlight"]){
+        
+		NSIndexPath *indexPath = [self.flightTable indexPathForSelectedRow];
+        
+        NSDictionary *info = [[NSDictionary alloc]initWithObjectsAndKeys:
+                                 [flights objectAtIndex:indexPath.row],@"FLIGHT",
+                                 nil];
+		
+        ChatView *chatViewController = [[ChatView alloc] init];
+        UITabBarController *tbc = [segue destinationViewController];
+        chatViewController = (ChatView *)[[tbc customizableViewControllers] objectAtIndex:0];
+    }
 }
 
- */
+#pragma mark -
+#pragma mark CallBacks
+-(void)defaultCallback{
+    NSLog(@"defaultCallback");
+}
 
+-(void)getFlightsDidEnd:(NSArray *)result{
+    NSLog(@"getFlightsDidEnd");
+    for (NSDictionary *item in result) {
+        Flight *flight = [[Flight alloc] init];
+    }
+}
+#pragma mark -
 @end
