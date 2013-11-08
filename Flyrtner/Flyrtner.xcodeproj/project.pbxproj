@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E5192F34182D66FB00FD21A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5192F33182D66FB00FD21A8 /* Foundation.framework */; };
+		E5192F36182D66FB00FD21A8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5192F35182D66FB00FD21A8 /* CoreGraphics.framework */; };
+		E5192F38182D66FB00FD21A8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5192F37182D66FB00FD21A8 /* UIKit.framework */; };
+		E5192F3A182D66FB00FD21A8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5192F39182D66FB00FD21A8 /* CoreData.framework */; };
+		E5192F40182D66FB00FD21A8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E5192F3E182D66FB00FD21A8 /* InfoPlist.strings */; };
+		E5192F42182D66FB00FD21A8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5192F41182D66FB00FD21A8 /* main.m */; };
+		E5192F46182D66FB00FD21A8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5192F45182D66FB00FD21A8 /* AppDelegate.m */; };
+		E5192F49182D66FB00FD21A8 /* Flyrtner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E5192F47182D66FB00FD21A8 /* Flyrtner.xcdatamodeld */; };
+		E5192F4B182D66FB00FD21A8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5192F4A182D66FB00FD21A8 /* Images.xcassets */; };
+		E5192F52182D66FB00FD21A8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5192F51182D66FB00FD21A8 /* XCTest.framework */; };
+		E5192F53182D66FB00FD21A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5192F33182D66FB00FD21A8 /* Foundation.framework */; };
+		E5192F54182D66FB00FD21A8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5192F37182D66FB00FD21A8 /* UIKit.framework */; };
+		E5192F55182D66FB00FD21A8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5192F39182D66FB00FD21A8 /* CoreData.framework */; };
+		E5192F5D182D66FB00FD21A8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E5192F5B182D66FB00FD21A8 /* InfoPlist.strings */; };
+		E5192F5F182D66FB00FD21A8 /* FlyrtnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5192F5E182D66FB00FD21A8 /* FlyrtnerTests.m */; };
+		E5192F69182D67DE00FD21A8 /* Flyrtner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5192F68182D67DE00FD21A8 /* Flyrtner.storyboard */; };
+		E5192F6D182D6BB800FD21A8 /* FlightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5192F6C182D6BB800FD21A8 /* FlightCell.m */; };
+		E5192F70182D6BE600FD21A8 /* FlightView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5192F6F182D6BE600FD21A8 /* FlightView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E5192F56182D66FB00FD21A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5192F28182D66FB00FD21A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5192F2F182D66FB00FD21A8;
+			remoteInfo = Flyrtner;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E5192F30182D66FB00FD21A8 /* Flyrtner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flyrtner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5192F33182D66FB00FD21A8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E5192F35182D66FB00FD21A8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E5192F37182D66FB00FD21A8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E5192F39182D66FB00FD21A8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E5192F3D182D66FB00FD21A8 /* Flyrtner-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Flyrtner-Info.plist"; sourceTree = "<group>"; };
+		E5192F3F182D66FB00FD21A8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E5192F41182D66FB00FD21A8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E5192F43182D66FB00FD21A8 /* Flyrtner-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Flyrtner-Prefix.pch"; sourceTree = "<group>"; };
+		E5192F44182D66FB00FD21A8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E5192F45182D66FB00FD21A8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E5192F48182D66FB00FD21A8 /* Flyrtner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Flyrtner.xcdatamodel; sourceTree = "<group>"; };
+		E5192F4A182D66FB00FD21A8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E5192F50182D66FB00FD21A8 /* FlyrtnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlyrtnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5192F51182D66FB00FD21A8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		E5192F5A182D66FB00FD21A8 /* FlyrtnerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FlyrtnerTests-Info.plist"; sourceTree = "<group>"; };
+		E5192F5C182D66FB00FD21A8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E5192F5E182D66FB00FD21A8 /* FlyrtnerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlyrtnerTests.m; sourceTree = "<group>"; };
+		E5192F68182D67DE00FD21A8 /* Flyrtner.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Flyrtner.storyboard; sourceTree = "<group>"; };
+		E5192F6B182D6BB800FD21A8 /* FlightCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlightCell.h; path = Flight/FlightCell.h; sourceTree = "<group>"; };
+		E5192F6C182D6BB800FD21A8 /* FlightCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlightCell.m; path = Flight/FlightCell.m; sourceTree = "<group>"; };
+		E5192F6E182D6BE600FD21A8 /* FlightView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlightView.h; path = Flight/FlightView.h; sourceTree = "<group>"; };
+		E5192F6F182D6BE600FD21A8 /* FlightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlightView.m; path = Flight/FlightView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E5192F2D182D66FB00FD21A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5192F36182D66FB00FD21A8 /* CoreGraphics.framework in Frameworks */,
+				E5192F3A182D66FB00FD21A8 /* CoreData.framework in Frameworks */,
+				E5192F38182D66FB00FD21A8 /* UIKit.framework in Frameworks */,
+				E5192F34182D66FB00FD21A8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5192F4D182D66FB00FD21A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5192F52182D66FB00FD21A8 /* XCTest.framework in Frameworks */,
+				E5192F55182D66FB00FD21A8 /* CoreData.framework in Frameworks */,
+				E5192F54182D66FB00FD21A8 /* UIKit.framework in Frameworks */,
+				E5192F53182D66FB00FD21A8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E5192F27182D66FB00FD21A8 = {
+			isa = PBXGroup;
+			children = (
+				E5192F3B182D66FB00FD21A8 /* Flyrtner */,
+				E5192F58182D66FB00FD21A8 /* FlyrtnerTests */,
+				E5192F32182D66FB00FD21A8 /* Frameworks */,
+				E5192F31182D66FB00FD21A8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E5192F31182D66FB00FD21A8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E5192F30182D66FB00FD21A8 /* Flyrtner.app */,
+				E5192F50182D66FB00FD21A8 /* FlyrtnerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E5192F32182D66FB00FD21A8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E5192F33182D66FB00FD21A8 /* Foundation.framework */,
+				E5192F35182D66FB00FD21A8 /* CoreGraphics.framework */,
+				E5192F37182D66FB00FD21A8 /* UIKit.framework */,
+				E5192F39182D66FB00FD21A8 /* CoreData.framework */,
+				E5192F51182D66FB00FD21A8 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E5192F3B182D66FB00FD21A8 /* Flyrtner */ = {
+			isa = PBXGroup;
+			children = (
+				E5192F6A182D6B7700FD21A8 /* Flight */,
+				E5192F44182D66FB00FD21A8 /* AppDelegate.h */,
+				E5192F45182D66FB00FD21A8 /* AppDelegate.m */,
+				E5192F4A182D66FB00FD21A8 /* Images.xcassets */,
+				E5192F47182D66FB00FD21A8 /* Flyrtner.xcdatamodeld */,
+				E5192F3C182D66FB00FD21A8 /* Supporting Files */,
+				E5192F68182D67DE00FD21A8 /* Flyrtner.storyboard */,
+			);
+			path = Flyrtner;
+			sourceTree = "<group>";
+		};
+		E5192F3C182D66FB00FD21A8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E5192F3D182D66FB00FD21A8 /* Flyrtner-Info.plist */,
+				E5192F3E182D66FB00FD21A8 /* InfoPlist.strings */,
+				E5192F41182D66FB00FD21A8 /* main.m */,
+				E5192F43182D66FB00FD21A8 /* Flyrtner-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E5192F58182D66FB00FD21A8 /* FlyrtnerTests */ = {
+			isa = PBXGroup;
+			children = (
+				E5192F5E182D66FB00FD21A8 /* FlyrtnerTests.m */,
+				E5192F59182D66FB00FD21A8 /* Supporting Files */,
+			);
+			path = FlyrtnerTests;
+			sourceTree = "<group>";
+		};
+		E5192F59182D66FB00FD21A8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E5192F5A182D66FB00FD21A8 /* FlyrtnerTests-Info.plist */,
+				E5192F5B182D66FB00FD21A8 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E5192F6A182D6B7700FD21A8 /* Flight */ = {
+			isa = PBXGroup;
+			children = (
+				E5192F6B182D6BB800FD21A8 /* FlightCell.h */,
+				E5192F6C182D6BB800FD21A8 /* FlightCell.m */,
+				E5192F6E182D6BE600FD21A8 /* FlightView.h */,
+				E5192F6F182D6BE600FD21A8 /* FlightView.m */,
+			);
+			name = Flight;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E5192F2F182D66FB00FD21A8 /* Flyrtner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5192F62182D66FB00FD21A8 /* Build configuration list for PBXNativeTarget "Flyrtner" */;
+			buildPhases = (
+				E5192F2C182D66FB00FD21A8 /* Sources */,
+				E5192F2D182D66FB00FD21A8 /* Frameworks */,
+				E5192F2E182D66FB00FD21A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Flyrtner;
+			productName = Flyrtner;
+			productReference = E5192F30182D66FB00FD21A8 /* Flyrtner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E5192F4F182D66FB00FD21A8 /* FlyrtnerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5192F65182D66FB00FD21A8 /* Build configuration list for PBXNativeTarget "FlyrtnerTests" */;
+			buildPhases = (
+				E5192F4C182D66FB00FD21A8 /* Sources */,
+				E5192F4D182D66FB00FD21A8 /* Frameworks */,
+				E5192F4E182D66FB00FD21A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E5192F57182D66FB00FD21A8 /* PBXTargetDependency */,
+			);
+			name = FlyrtnerTests;
+			productName = FlyrtnerTests;
+			productReference = E5192F50182D66FB00FD21A8 /* FlyrtnerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E5192F28182D66FB00FD21A8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Cabeza la Vaca";
+				TargetAttributes = {
+					E5192F4F182D66FB00FD21A8 = {
+						TestTargetID = E5192F2F182D66FB00FD21A8;
+					};
+				};
+			};
+			buildConfigurationList = E5192F2B182D66FB00FD21A8 /* Build configuration list for PBXProject "Flyrtner" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E5192F27182D66FB00FD21A8;
+			productRefGroup = E5192F31182D66FB00FD21A8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E5192F2F182D66FB00FD21A8 /* Flyrtner */,
+				E5192F4F182D66FB00FD21A8 /* FlyrtnerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E5192F2E182D66FB00FD21A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5192F40182D66FB00FD21A8 /* InfoPlist.strings in Resources */,
+				E5192F69182D67DE00FD21A8 /* Flyrtner.storyboard in Resources */,
+				E5192F4B182D66FB00FD21A8 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5192F4E182D66FB00FD21A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5192F5D182D66FB00FD21A8 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E5192F2C182D66FB00FD21A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5192F46182D66FB00FD21A8 /* AppDelegate.m in Sources */,
+				E5192F6D182D6BB800FD21A8 /* FlightCell.m in Sources */,
+				E5192F42182D66FB00FD21A8 /* main.m in Sources */,
+				E5192F49182D66FB00FD21A8 /* Flyrtner.xcdatamodeld in Sources */,
+				E5192F70182D6BE600FD21A8 /* FlightView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5192F4C182D66FB00FD21A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5192F5F182D66FB00FD21A8 /* FlyrtnerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E5192F57182D66FB00FD21A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E5192F2F182D66FB00FD21A8 /* Flyrtner */;
+			targetProxy = E5192F56182D66FB00FD21A8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E5192F3E182D66FB00FD21A8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E5192F3F182D66FB00FD21A8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E5192F5B182D66FB00FD21A8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E5192F5C182D66FB00FD21A8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E5192F60182D66FB00FD21A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E5192F61182D66FB00FD21A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E5192F63182D66FB00FD21A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Flyrtner/Flyrtner-Prefix.pch";
+				INFOPLIST_FILE = "Flyrtner/Flyrtner-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E5192F64182D66FB00FD21A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Flyrtner/Flyrtner-Prefix.pch";
+				INFOPLIST_FILE = "Flyrtner/Flyrtner-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		E5192F66182D66FB00FD21A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Flyrtner.app/Flyrtner";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Flyrtner/Flyrtner-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "FlyrtnerTests/FlyrtnerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		E5192F67182D66FB00FD21A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Flyrtner.app/Flyrtner";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Flyrtner/Flyrtner-Prefix.pch";
+				INFOPLIST_FILE = "FlyrtnerTests/FlyrtnerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E5192F2B182D66FB00FD21A8 /* Build configuration list for PBXProject "Flyrtner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5192F60182D66FB00FD21A8 /* Debug */,
+				E5192F61182D66FB00FD21A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5192F62182D66FB00FD21A8 /* Build configuration list for PBXNativeTarget "Flyrtner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5192F63182D66FB00FD21A8 /* Debug */,
+				E5192F64182D66FB00FD21A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5192F65182D66FB00FD21A8 /* Build configuration list for PBXNativeTarget "FlyrtnerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5192F66182D66FB00FD21A8 /* Debug */,
+				E5192F67182D66FB00FD21A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E5192F47182D66FB00FD21A8 /* Flyrtner.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E5192F48182D66FB00FD21A8 /* Flyrtner.xcdatamodel */,
+			);
+			currentVersion = E5192F48182D66FB00FD21A8 /* Flyrtner.xcdatamodel */;
+			path = Flyrtner.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E5192F28182D66FB00FD21A8 /* Project object */;
+}
