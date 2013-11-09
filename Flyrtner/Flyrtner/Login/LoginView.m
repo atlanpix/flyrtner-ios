@@ -77,9 +77,9 @@
 					 NSDictionary *json = [NSDictionary dictionaryWithObjectsAndKeys:
 										   [user valueForKey:@"id"], @"idFacebook",
 										   [user valueForKey:@"email"], @"email",
-										   [user valueForKey:@"username"], @"usernameFB",
+										   [user valueForKey:@"name"], @"usernameFB",
 										   [[FBSession.activeSession accessTokenData] accessToken], @"oauthTokenFB",
-										   [NSString stringWithFormat:@"http://graph.facebook/%@/picture",[user valueForKey:@"id"]], @"urlImage",
+										   [NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=small",[user valueForKey:@"id"]], @"urlImage",
 										   [user valueForKey:@"name"], @"name",
 										   [[NSUserDefaults standardUserDefaults]objectForKey:@"deviceToken"], @"regId",
 										   @"iphone", @"systemPhone", nil];
@@ -87,7 +87,7 @@
 				 }
 
 				 NSData *imageData =
-				 [NSData dataWithContentsOfURL: [NSURL URLWithString:[NSString stringWithFormat:@"http://graph.facebook.com/%@/picture",[user valueForKey:@"username"]]]];
+				 [NSData dataWithContentsOfURL: [NSURL URLWithString:[NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=small",[user valueForKey:@"id"]]]];//username
 				 [[NSUserDefaults standardUserDefaults] setObject:imageData forKey:FACEBOOK_IMAGE];
 				 [[NSUserDefaults standardUserDefaults] setObject:imageData forKey:PROFILE_IMAGE];
 				 [[NSUserDefaults standardUserDefaults] setObject:user forKey:FACEBOOK_PROFILE];

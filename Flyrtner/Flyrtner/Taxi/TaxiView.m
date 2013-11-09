@@ -44,8 +44,8 @@
     flight = delegate.flight;
     AppCore *appCore = [[AppCore alloc] init];
     userId = [appCore getUserId];
-    flyrtnerAPI = [[FlyrtnerApi alloc] init];
     
+    flyrtnerAPI = [[FlyrtnerApi alloc] init];
     [flyrtnerAPI getTaxis:flight.flightId calledBy:self withSuccess:@selector(getTaxisDidEnd:)];
     [address setDelegate:self];
     [number setDelegate:self];
@@ -87,7 +87,7 @@
     Taxi *taxi = [taxis objectAtIndex:indexPath.row];
     
     cell.address.text = taxi.address;
-    cell.people.text = taxi.numberPeople;
+    cell.people.text = [NSString stringWithFormat:@"%@",taxi.numberPeople ];
     
     return cell;
 }
@@ -126,16 +126,16 @@
     [self.tableView reloadData];
 }
 
--(void)getTaxisDidEnd:(id)response{
+-(void)getTaxisDidEnd:(NSArray *)response{
     NSLog(@"getTaxisDidEnd");
     for (NSDictionary *obj in response){
         Taxi *taxi = [[Taxi alloc] init];
         taxi.address = [obj objectForKey:@"address"];
         taxi.numberPeople = [obj objectForKey:@"numberSit"];
         
-        if (taxis == nil){
+        //if (taxis == nil){
             taxis = [[NSMutableArray alloc] init];
-        }
+        //}
         [taxis addObject:taxi];
     }
     
