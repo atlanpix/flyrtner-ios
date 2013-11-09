@@ -316,6 +316,37 @@
             </objects>
             <point key="canvasLocation" x="977" y="-48"/>
         </scene>
+        <!--Login View-->
+        <scene sceneID="pb5-sJ-6fh">
+            <objects>
+                <viewController id="WdW-6p-RG9" customClass="LoginView" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8O9-Fm-mbg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pink.png" id="Gwf-Hh-5NR">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="flyrtner" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WQP-bc-mpI">
+                                <rect key="frame" x="53" y="111" width="214" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="49"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="SdJ-gH-GDm"/>
+                    <connections>
+                        <segue destination="aOh-lX-lXp" kind="push" id="Drq-SE-ANv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zrK-ud-kSG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-631" y="-98"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Q6F-V4-hQA">
             <objects>
@@ -327,12 +358,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="aOh-lX-lXp" kind="relationship" relationship="rootViewController" id="2qr-Ki-GmK"/>
+                        <segue destination="WdW-6p-RG9" kind="relationship" relationship="rootViewController" id="zeu-Di-Q8m"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kXM-Ru-bn2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-687" y="-98"/>
+            <point key="canvasLocation" x="-1067" y="-90"/>
         </scene>
         <!--Tab Bar Controller - VY1111-->
         <scene sceneID="hl8-Ht-8Lq">
@@ -362,7 +393,10 @@
         <image name="icon-people.png" width="25" height="25"/>
         <image name="icon-taxi.png" width="25" height="25"/>
         <image name="person-anonymous.png" width="75" height="75"/>
+        <image name="person-anonymous.png" width="75" height="75"/>
         <image name="pink.png" width="1" height="1"/>
+        <image name="pink.png" width="1" height="1"/>
+        <image name="white.png" width="1" height="1"/>
         <image name="white.png" width="1" height="1"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

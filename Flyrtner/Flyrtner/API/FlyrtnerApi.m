@@ -37,13 +37,13 @@
     [self placeGetRequestWithURL:url
               withHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
                   // 1) initialize the array of JSON
-                  NSDictionary *response = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+                  NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
 				  // 2) perform selector
-				  if (!response) {
+				  if (!json) {
 					  [calledBy performSelector:failureCallback];
 				  } else {
-					  NSLog(@"VuqioAPI: getGuide OK");
-					  [calledBy performSelector:successCallback withObject:guide];
+					  NSLog(@"getFrlight OK");
+					  [calledBy performSelector:successCallback withObject:json];
 				  }
                }];
 }
@@ -68,22 +68,15 @@
 {
     [self placePostRequest:@"api/loginFacebook"
                   withData:data
-               withHandler:^(NSURLResponse *urlResponse, NSData *rawData, NSError *error) {
+               withHandler:^(NSURLResponse *urlResponse, NSData *data, NSError *error) {
 
-                   NSString *string = [[NSString alloc] initWithData:rawData
-                                                            encoding:NSUTF8StringEncoding];
-        
-                   /*
-                   NSDictionary *json = [NSJSONSerialization JSONObjectWithData:rawData
-                                                                        options:0
-                                                                          error:nil];
-                   */
-				   NSLog(@"%@", urlResponse);
-                   if (! string) {
+                   NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+                   
+                   if (! json) {
                        [calledBy performSelector:failureCallback];
                    } else {
                        NSLog(@"OK");
-                       [calledBy performSelector:successCallback withObject:string];
+                       [calledBy performSelector:successCallback withObject:json];
                    }
                }];
 }

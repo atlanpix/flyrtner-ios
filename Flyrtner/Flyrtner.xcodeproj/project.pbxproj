@@ -28,6 +28,11 @@
 		E5134BB3182DBF1F00805F33 /* SRWebSocket.h in Sources */ = {isa = PBXBuildFile; fileRef = E5134B74182DB4B100805F33 /* SRWebSocket.h */; };
 		E5134BB5182DBF7600805F33 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5134BB4182DBF7600805F33 /* CFNetwork.framework */; };
 		E5134BB7182DBF7B00805F33 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E5134BB6182DBF7B00805F33 /* libicucore.dylib */; };
+		E5134BBB182DC62E00805F33 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5134BBA182DC62E00805F33 /* LoginView.m */; };
+		E5134BBE182DC70400805F33 /* LoginFacebookButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E5134BBD182DC70400805F33 /* LoginFacebookButton.m */; };
+		E5134BC1182DCB1F00805F33 /* AppCore.m in Sources */ = {isa = PBXBuildFile; fileRef = E5134BC0182DCB1F00805F33 /* AppCore.m */; };
+		E5134BC4182DCB2C00805F33 /* loginFacebook-pushed.png in Resources */ = {isa = PBXBuildFile; fileRef = E5134BC2182DCB2C00805F33 /* loginFacebook-pushed.png */; };
+		E5134BC5182DCB2C00805F33 /* loginFacebook.png in Resources */ = {isa = PBXBuildFile; fileRef = E5134BC3182DCB2C00805F33 /* loginFacebook.png */; };
 		E5192F34182D66FB00FD21A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5192F33182D66FB00FD21A8 /* Foundation.framework */; };
 		E5192F36182D66FB00FD21A8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5192F35182D66FB00FD21A8 /* CoreGraphics.framework */; };
 		E5192F38182D66FB00FD21A8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5192F37182D66FB00FD21A8 /* UIKit.framework */; };
@@ -116,6 +121,14 @@
 		E5134BAE182DBDAB00805F33 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		E5134BB4182DBF7600805F33 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		E5134BB6182DBF7B00805F33 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		E5134BB9182DC62E00805F33 /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginView.h; path = Login/LoginView.h; sourceTree = "<group>"; };
+		E5134BBA182DC62E00805F33 /* LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginView.m; path = Login/LoginView.m; sourceTree = "<group>"; };
+		E5134BBC182DC70400805F33 /* LoginFacebookButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginFacebookButton.h; path = Login/LoginFacebookButton.h; sourceTree = "<group>"; };
+		E5134BBD182DC70400805F33 /* LoginFacebookButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginFacebookButton.m; path = Login/LoginFacebookButton.m; sourceTree = "<group>"; };
+		E5134BBF182DCB1F00805F33 /* AppCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppCore.h; path = Resources/Classes/AppCore.h; sourceTree = "<group>"; };
+		E5134BC0182DCB1F00805F33 /* AppCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppCore.m; path = Resources/Classes/AppCore.m; sourceTree = "<group>"; };
+		E5134BC2182DCB2C00805F33 /* loginFacebook-pushed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "loginFacebook-pushed.png"; path = "Resources/Images/loginFacebook-pushed.png"; sourceTree = "<group>"; };
+		E5134BC3182DCB2C00805F33 /* loginFacebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loginFacebook.png; path = Resources/Images/loginFacebook.png; sourceTree = "<group>"; };
 		E5192F30182D66FB00FD21A8 /* Flyrtner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flyrtner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5192F33182D66FB00FD21A8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E5192F35182D66FB00FD21A8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -225,6 +238,8 @@
 		E5134B69182DB2FE00805F33 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E5134BBF182DCB1F00805F33 /* AppCore.h */,
+				E5134BC0182DCB1F00805F33 /* AppCore.m */,
 				E5134B9F182DBC9800805F33 /* DateFactory.h */,
 				E5134BA0182DBC9800805F33 /* DateFactory.m */,
 				E5134BA3182DBC9800805F33 /* PushNoAnimationSegue.h */,
@@ -257,6 +272,17 @@
 			);
 			name = Manager;
 			path = DataBase/Manager;
+			sourceTree = "<group>";
+		};
+		E5134BB8182DC61100805F33 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E5134BBC182DC70400805F33 /* LoginFacebookButton.h */,
+				E5134BBD182DC70400805F33 /* LoginFacebookButton.m */,
+				E5134BB9182DC62E00805F33 /* LoginView.h */,
+				E5134BBA182DC62E00805F33 /* LoginView.m */,
+			);
+			name = Login;
 			sourceTree = "<group>";
 		};
 		E5192F27182D66FB00FD21A8 = {
@@ -400,6 +426,8 @@
 		E5192F75182D6D4000FD21A8 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				E5134BC2182DCB2C00805F33 /* loginFacebook-pushed.png */,
+				E5134BC3182DCB2C00805F33 /* loginFacebook.png */,
 				E5192FDB182D98A300FD21A8 /* Icons */,
 				E5192FBB182D950600FD21A8 /* black.png */,
 				E5192FBC182D950600FD21A8 /* white.png */,
@@ -425,6 +453,7 @@
 		E5192F92182D7FBD00FD21A8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E5134BB8182DC61100805F33 /* Login */,
 				E5134B9C182DBC8D00805F33 /* TabBarController.h */,
 				E5134B9D182DBC8D00805F33 /* TabBarController.m */,
 				E5192FCB182D964700FD21A8 /* Conversation */,
@@ -571,6 +600,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5134BC4182DCB2C00805F33 /* loginFacebook-pushed.png in Resources */,
 				E5192FB9182D94B400FD21A8 /* person-anonymous.png in Resources */,
 				E5192FBA182D94B400FD21A8 /* pink.png in Resources */,
 				E5192FE1182D98B700FD21A8 /* icon-taxi.png in Resources */,
@@ -582,6 +612,7 @@
 				E5192FDF182D98B700FD21A8 /* icon-chat.png in Resources */,
 				E5192FEB182D9A4F00FD21A8 /* icon-taxi@2x.png in Resources */,
 				E5192FBD182D950600FD21A8 /* black.png in Resources */,
+				E5134BC5182DCB2C00805F33 /* loginFacebook.png in Resources */,
 				E5192FEA182D9A4F00FD21A8 /* icon-people@2x.png in Resources */,
 				E5192FE0182D98B700FD21A8 /* icon-people.png in Resources */,
 			);
@@ -617,15 +648,18 @@
 				E5192FD1182D96B000FD21A8 /* ConversationView.m in Sources */,
 				E5192FD4182D96C900FD21A8 /* ConversationCell.m in Sources */,
 				E5134BA6182DBC9800805F33 /* Definitions.m in Sources */,
+				E5134BBE182DC70400805F33 /* LoginFacebookButton.m in Sources */,
 				E5192F6D182D6BB800FD21A8 /* FlightCell.m in Sources */,
 				E5134B7B182DB4B100805F33 /* SRWebSocket.m in Sources */,
 				E5192FC1182D955500FD21A8 /* PeopleView.m in Sources */,
 				E5192FA6182D807F00FD21A8 /* DBUser.m in Sources */,
 				E5134BA5182DBC9800805F33 /* DateFactory.m in Sources */,
 				E5134B96182DBB1D00805F33 /* AppDataModel.m in Sources */,
+				E5134BC1182DCB1F00805F33 /* AppCore.m in Sources */,
 				E5192FF7182DA0C100FD21A8 /* Message.m in Sources */,
 				E5134B87182DBA7700805F33 /* DBChatManager.m in Sources */,
 				E5192FDA182D96FD00FD21A8 /* TaxiView.m in Sources */,
+				E5134BBB182DC62E00805F33 /* LoginView.m in Sources */,
 				E5134B88182DBA7700805F33 /* DBMessageManager.m in Sources */,
 				E5192FEE182D9F7900FD21A8 /* Taxi.m in Sources */,
 				E5192FD7182D96E600FD21A8 /* TaxiCell.m in Sources */,

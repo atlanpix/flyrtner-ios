@@ -18,6 +18,32 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"HasLaunchedOnce"])
+    {
+        if ([[NSUserDefaults standardUserDefaults] boolForKey:LOGGED_FACEBOOK]) {
+			if (FBSession.activeSession.state == FBSessionStateCreatedTokenLoaded) {
+				// Yes, so just open the session (this won't display any UX).
+				NSLog(@"logged");
+				[self openSession];
+			} else {
+				// No, display the login page.
+				// [self showLoginView];
+			}
+		}
+	}
+    else
+    {
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"HasLaunchedOnce"];
+		[[NSUserDefaults standardUserDefaults] setBool:NO forKey:LOGGED_FACEBOOK];
+		[[NSUserDefaults standardUserDefaults] setBool:NO forKey:LOGGED_FACEBOOK_BACKEND];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        // This is the first launch ever
+    }
+    
+    
+    
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Flyrtner" bundle:nil];
     self.window.rootViewController = [storyboard instantiateInitialViewController];
     
@@ -148,6 +174,68 @@
 - (NSURL *)applicationDocumentsDirectory
 {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+}
+
+#pragma mark Facebook login
+
+// The native facebook application transitions back to an authenticating application when the user
+// chooses to either log in, or cancel. The url passed to this method contains the token in the
+// case of a successful login. By passing the url to the handleOpenURL method of FBAppCall the provided
+// session object can parse the URL, and capture the token for use by the rest of the authenticating
+// application; the return value of handleOpenURL indicates whether or not the URL was handled by the
+// session object, and does not reflect whether or not the login was successful; the session object's
+// state, as well as its arguments passed to the state completion handler indicate whether the login
+// was successful; note that if the session is nil or closed when handleOpenURL is called, the expression
+// will be boolean NO, meaning the URL was not handled by the authenticating application
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    // attempt to extract a token from the url
+    
+    // PARA EL LOGIN FEO
+    return [FBAppCall handleOpenURL:url
+                  sourceApplication:sourceApplication
+                        withSession:self.session];
+    
+    //return [FBSession.activeSession handleOpenURL:url];
+}
+
+#pragma mark Facebook nativo
+- (void)sessionStateChanged:(FBSession *)session
+                      state:(FBSessionState) state
+                      error:(NSError *)error
+{
+    switch (state) {
+        case FBSessionStateOpen: {
+            break;
+        case FBSessionStateClosed:
+        case FBSessionStateClosedLoginFailed:
+            break;
+        default:
+            break;
+        }
+            
+            if (error) {
+                UIAlertView *alertView = [[UIAlertView alloc]
+                                          initWithTitle:@"Error"
+                                          message:error.localizedDescription
+                                          delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+                [alertView show];
+            }
+    }
+}
+
+- (void)openSession {
+    [FBSession openActiveSessionWithReadPermissions:nil
+                                       allowLoginUI:YES
+                                  completionHandler:
+     ^(FBSession *session,
+       FBSessionState state, NSError *error) {
+         [self sessionStateChanged:session state:state error:error];
+     }];
 }
 
 @end
