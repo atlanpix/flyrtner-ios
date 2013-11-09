@@ -415,7 +415,7 @@
         // Mandamos el mensaje por sockets con el typo: text
         [_webSocket send:[NSString stringWithFormat:@"{\"text\":\"%@\"}",text]];
         
-        NSString *authorImage = [[NSUserDefaults standardUserDefaults] objectForKey:@"profileImage"];
+        NSString *authorImage = [[NSUserDefaults standardUserDefaults] objectForKey:PROFILE_IMAGE_URL];
         
         [_messages addObject:[[Message alloc] initWithMessage:text fromMe:YES author:username image:authorImage]];
         

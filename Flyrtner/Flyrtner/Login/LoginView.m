@@ -90,6 +90,8 @@
 				 [NSData dataWithContentsOfURL: [NSURL URLWithString:[NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=small",[user valueForKey:@"id"]]]];//username
 				 [[NSUserDefaults standardUserDefaults] setObject:imageData forKey:FACEBOOK_IMAGE];
 				 [[NSUserDefaults standardUserDefaults] setObject:imageData forKey:PROFILE_IMAGE];
+                 NSString *imageDataURL = [NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=small",[user valueForKey:@"id"]];
+                 [[NSUserDefaults standardUserDefaults] setObject:imageDataURL forKey:PROFILE_IMAGE_URL];
 				 [[NSUserDefaults standardUserDefaults] setObject:user forKey:FACEBOOK_PROFILE];
 				 [[NSUserDefaults standardUserDefaults] setObject:[user valueForKey:@"name"] forKey:PROFILE_NAME];
 				 

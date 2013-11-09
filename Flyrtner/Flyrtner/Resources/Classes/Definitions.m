@@ -10,6 +10,7 @@
 
 NSString *const PROFILE_NAME = @"profileName";
 NSString *const PROFILE_IMAGE = @"profileImage";
+NSString *const PROFILE_IMAGE_URL = @"profileImageUrl";
 
 NSString *const FACEBOOK_PROFILE = @"facebookProfile";
 NSString *const FACEBOOK_IMAGE = @"facebookImage";
