@@ -7,7 +7,7 @@
 //
 
 #import "ChatView.h"
-
+#define PIXELES 170
 @interface ChatView ()
 
 @end
@@ -90,10 +90,13 @@
     [_webSocket close];
     
     flight = [infoSegue objectForKey:@"FLIGHT"];
+    AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    delegate.flight = flight;
+    
     userId = [[NSUserDefaults standardUserDefaults]objectForKey:USER_ID];
     username = [[NSUserDefaults standardUserDefaults]objectForKey:PROFILE_NAME];
-    username = [username stringByReplacingOccurrencesOfString:@" " withString:@"-"];
-    NSString *url = [NSString stringWithFormat:@"ws://%@/room/chat?username=%@&userId=%@&pid=%@&typeChat=%@",URL_API_CHAT,username,userId,flight.flightNumber,@"2"];
+    NSString *usernameURL = [username stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *url = [NSString stringWithFormat:@"ws://%@/room/chat?username=%@&userId=%@&pid=%@&typeChat=%@",URL_API_CHAT,usernameURL,userId,flight.flightNumber,@"2"];
     
     NSLog(url);
     
@@ -236,6 +239,7 @@
     
     NSString *kindJSON = [allJSON objectForKey:@"kind"];
     NSString *userJSON = [allJSON objectForKey:@"user"];
+    NSString *usernameJSON = [allJSON objectForKey:@"username"];
     NSString *messageJSON = [allJSON objectForKey:@"message"];
     NSArray *membersJSON = [allJSON objectForKey:@"members"];
     
@@ -258,7 +262,7 @@
             break;
             // talk
         case 1:
-            if (![userJSON isEqual: userId]){
+            if (![usernameJSON isEqual: username]){
                 // Al recibir el primer mensaje, ocultamos los mensajes de no hay mensajes
                 if ([_messages count] == 0) {
                     [noMessagesLabel setHidden:true];
@@ -266,7 +270,7 @@
                 
                 //NSURL* imageURL = [NSURL URLWithString:person.image];
                 //NSData *authorImage = [[NSData alloc] initWithContentsOfURL:imageURL];
-                [_messages addObject:[[Message alloc] initWithMessage:messageJSON fromMe:NO author:userJSON image:nil]];
+                [_messages addObject:[[Message alloc] initWithMessage:messageJSON fromMe:NO author:usernameJSON image:nil]];
                 
                 [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:_messages.count - 1 inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
                 
@@ -335,7 +339,7 @@
         
         NSString *authorImage = [[NSUserDefaults standardUserDefaults] objectForKey:PROFILE_IMAGE];
         
-        [_messages addObject:[[Message alloc] initWithMessage:message fromMe:YES author:userId image:authorImage]];
+        [_messages addObject:[[Message alloc] initWithMessage:message fromMe:YES author:username image:authorImage]];
         
         [self.tableView beginUpdates];
         [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:_messages.count - 1 inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
@@ -351,7 +355,7 @@
 
 - (void) animateTextField: (UITextField*) textField up: (BOOL)up
 {
-    const int movementDistance = 170;
+    const int movementDistance = PIXELES;
     const float movementDuration = 0.3f;
     int movement = (up ? -movementDistance : movementDistance);
     
@@ -366,8 +370,8 @@
 - (IBAction)goingUp:(id)sender {
     [self animateTextField:inputText up:TRUE];
     CGRect rect = self.tableView.frame;
-    rect.size.height = rect.size.height - 170;//218
-    rect.origin.y = rect.origin.y + 170;
+    rect.size.height = rect.size.height - PIXELES;//218
+    rect.origin.y = rect.origin.y + PIXELES;
     self.tableView.frame = rect;
     clickOnInput = TRUE;
     [self scrollBottom];
@@ -376,8 +380,8 @@
 - (IBAction)goingDown:(id)sender {
     if (clickOnInput){
         CGRect rect = self.tableView.frame;
-        rect.size.height = rect.size.height + 170; //218
-        rect.origin.y = rect.origin.y - 170;
+        rect.size.height = rect.size.height + PIXELES; //218
+        rect.origin.y = rect.origin.y - PIXELES;
         self.tableView.frame = rect;
         [self animateTextField:inputText up:FALSE];
         clickOnInput = FALSE;
@@ -413,7 +417,7 @@
         
         NSString *authorImage = [[NSUserDefaults standardUserDefaults] objectForKey:@"profileImage"];
         
-        [_messages addObject:[[Message alloc] initWithMessage:text fromMe:YES author:userId image:authorImage]];
+        [_messages addObject:[[Message alloc] initWithMessage:text fromMe:YES author:username image:authorImage]];
         
         [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:_messages.count - 1 inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
         
@@ -454,7 +458,7 @@
     if (clickOnInput){
         [self animateTextField:inputText up:FALSE];
         CGRect rect = self.tableView.frame;
-        rect.size.height = rect.size.height + 218;
+        rect.size.height = rect.size.height + PIXELES;
         self.tableView.frame = rect;
         [inputText resignFirstResponder];
         clickOnInput = FALSE;

@@ -9,7 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "Person.h"
 #import "FlyrtnerApi.h"
+#import "Flight.h"
+#import "PeopleCell.h"
 
-@interface PeopleView : UIViewController
+@interface PeopleView : UIViewController<UITableViewDataSource,UITableViewDelegate,NSURLConnectionDataDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property (strong, nonatomic) NSDictionary *infoSegue;
 
 @end

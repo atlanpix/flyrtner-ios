@@ -84,6 +84,18 @@
              withSuccess:(SEL)successCallback
               andFailure:(SEL)failureCallback;
 #pragma mark -
+
+#pragma mark People
+
+- (void) getUsersFlight:(NSString *)flightId
+         calledBy:(id)calledBy
+      withSuccess:(SEL)successCallback;
+
+- (void) getUsersFlight:(NSString *)flightId
+         calledBy:(id)calledBy
+      withSuccess:(SEL)successCallback
+       andFailure:(SEL)failureCallback;
+#pragma mark -
 //
 //#pragma mark PutOnline
 ///** PUT: /api/online (idUser:String,online:Boolean) */

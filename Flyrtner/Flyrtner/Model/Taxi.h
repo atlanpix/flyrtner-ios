@@ -14,5 +14,6 @@
 @property NSString *address;
 @property NSMutableArray *people;
 @property NSString *description;
+@property NSString *creatorId;
 
 @end

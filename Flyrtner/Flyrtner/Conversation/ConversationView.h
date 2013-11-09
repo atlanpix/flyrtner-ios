@@ -12,4 +12,6 @@
 
 @interface ConversationView : UIViewController
 
+@property (strong, nonatomic) NSDictionary *infoSegue;
+
 @end

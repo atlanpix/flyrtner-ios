@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "FlyrtnerApi.h"
+#import "TaxiCell.h"
+#import "DBTaxiManager.h"
+#import "Taxi.h"
 
-@interface TaxiView : UIViewController
+@interface TaxiView : UIViewController<UITableViewDataSource,UITableViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property (strong, nonatomic) NSDictionary *infoSegue;
 
 @end

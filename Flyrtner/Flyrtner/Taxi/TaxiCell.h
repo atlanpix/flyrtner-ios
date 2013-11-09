@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface TaxiCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *address;
+@property (weak, nonatomic) IBOutlet UILabel *people;
+@property (weak, nonatomic) IBOutlet UITextView *description;
+@property (weak, nonatomic) IBOutlet UIWebView *mapWebView;
 
 @end

@@ -226,6 +226,41 @@
 
 }
 #pragma mark -
+#pragma mark People
+
+- (void) getUsersFlight:(NSString *)flightId
+         calledBy:(id)calledBy
+      withSuccess:(SEL)successCallback{
+    
+    [self getUsersFlight:flightId
+          calledBy:calledBy
+       withSuccess:successCallback
+        andFailure:@selector(defaultFailureCallback)];
+}
+
+- (void) getUsersFlight:(NSString *)flightId
+         calledBy:(id)calledBy
+      withSuccess:(SEL)successCallback
+       andFailure:(SEL)failureCallback{
+    
+    [self placeGetRequest:[NSString stringWithFormat:@"api/getIdsUsersFly?fly_id=%@",flightId]
+              withHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+                  
+                  // 1) initialize the array of JSON
+                  NSArray *array = [NSJSONSerialization JSONObjectWithData:data
+                                                                   options:0
+                                                                     error:nil];
+                  // 2) perform selector
+                  if (!array) {
+                      [calledBy performSelector:failureCallback];
+                  } else {
+                      NSLog(@"getUsersFlight OK");
+                      [calledBy performSelector:successCallback withObject:array];
+                  }
+              }];
+    
+}
+#pragma mark -
 //#pragma mark PutOnline
 //
 ///** PUT: /api/online (idUser:String,online:Boolean) */

@@ -1,9 +1,9 @@
 //
 //  DBMessageManager.m
-//  Vuqio
+//  Flyrtner
 //
-//  Created by Enrique Mendoza Robaina on 17/10/13.
-//  Copyright (c) 2013 Buqio SL. All rights reserved.
+//  Created by Enrique Mendoza Robaina on 09/11/13.
+//  Copyright (c) 2013 Cabeza la Vaca. All rights reserved.
 //
 
 #import "DBMessageManager.h"
