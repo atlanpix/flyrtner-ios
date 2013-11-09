@@ -17,34 +17,33 @@
 
 #pragma mark -
 #pragma mark Flight
-- (void) getFlight:(NSString *)flightNumber
+- (void) flight:(NSDictionary *)data
        calledBy:(id)calledBy
     withSuccess:(SEL)successCallback;
 {
-    [self getFlight:flightNumber
+    [self flight:data
         calledBy:calledBy
       withSuccess:successCallback
       andFailure:@selector(defaultFailureCallback)];
 }
 
-- (void) getFlight:(NSString *)flightNumber
+- (void) flight:(NSDictionary *)data
        calledBy:(id)calledBy
     withSuccess:(SEL)successCallback
      andFailure:(SEL)failureCallback
 {
-    NSString *url = [NSString stringWithFormat:@"%@/api/getFly?flyNumber=%@",URL_API,flightNumber];
-    NSLog(url);
-    [self placeGetRequestWithURL:url
-              withHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
-                  // 1) initialize the array of JSON
-                  NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-				  // 2) perform selector
-				  if (!json) {
-					  [calledBy performSelector:failureCallback];
-				  } else {
-					  NSLog(@"getFrlight OK");
-					  [calledBy performSelector:successCallback withObject:json];
-				  }
+    [self placePostRequest:@"api/getFly"
+                  withData:data
+               withHandler:^(NSURLResponse *urlResponse, NSData *rawData, NSError *error) {
+                   
+                   NSDictionary *json = [NSJSONSerialization JSONObjectWithData:rawData options:0 error:nil];
+                   
+                   if (! json) {
+                       [calledBy performSelector:failureCallback];
+                   } else {
+                       NSLog(@"OK");
+                       [calledBy performSelector:successCallback withObject:json];
+                   }
                }];
 }
 
@@ -81,6 +80,151 @@
                }];
 }
 
+#pragma mark Taxi
+// POST
+- (void) createTaxi:(NSDictionary *)data
+           calledBy:(id)calledBy
+        withSuccess:(SEL)successCallback{
+
+    [self createTaxi:data
+        calledBy:calledBy
+     withSuccess:successCallback
+      andFailure:@selector(defaultFailureCallback)];
+}
+
+- (void) createTaxi:(NSDictionary *)data
+           calledBy:(id)calledBy
+        withSuccess:(SEL)successCallback
+         andFailure:(SEL)failureCallback{
+    
+    [self placePostRequest:@"api/createTaxi"
+                  withData:data
+               withHandler:^(NSURLResponse *urlResponse, NSData *rawData, NSError *error) {
+                   
+                   NSDictionary *json = [NSJSONSerialization JSONObjectWithData:rawData options:0 error:nil];
+                   
+                   if (! json) {
+                       [calledBy performSelector:failureCallback];
+                   } else {
+                       NSLog(@"OK");
+                       [calledBy performSelector:successCallback withObject:json];
+                   }
+               }];
+
+}
+
+// PUT
+- (void) checkTaxi:(NSString *)taxiId
+            userId:(NSString *)userId
+          isOnline:(BOOL)isOnline
+          calledBy:(id)calledBy
+       withSuccess:(SEL)successCallback{
+    
+    [self checkTaxi:taxiId
+             userId:userId
+        calledBy:calledBy
+     withSuccess:successCallback
+      andFailure:@selector(defaultFailureCallback)];
+
+}
+
+- (void) checkTaxi:(NSString *)taxiId
+            userId:(NSString *)userId
+          calledBy:(id)calledBy
+       withSuccess:(SEL)successCallback
+        andFailure:(SEL)failureCallback{
+    
+    [self placeGetRequest:[NSString stringWithFormat:@"api/checkTaxi?taxiId=%@&userId=%@",taxiId,userId]
+              withHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+                  
+                  // 1) initialize the array of JSON
+                  NSArray *array = [NSJSONSerialization JSONObjectWithData:data
+                                                                   options:0
+                                                                     error:nil];
+                  // 2) perform selector
+                  if (!array) {
+                      [calledBy performSelector:failureCallback];
+                  } else {
+                      NSLog(@"checkTaxi OK");
+                      [calledBy performSelector:successCallback];
+                  }
+              }];
+
+}
+
+
+- (void) uncheckTaxi:(NSString *)taxiId
+              userId:(NSString *)userId
+            isOnline:(BOOL)isOnline
+            calledBy:(id)calledBy
+         withSuccess:(SEL)successCallback{
+    
+    [self uncheckTaxi:taxiId
+               userId:userId
+        calledBy:calledBy
+     withSuccess:successCallback
+      andFailure:@selector(defaultFailureCallback)];
+
+}
+
+// PUT
+- (void) uncheckTaxi:(NSString *)taxiId
+              userId:(NSString *)userId
+            calledBy:(id)calledBy
+         withSuccess:(SEL)successCallback
+          andFailure:(SEL)failureCallback{
+    
+    [self placeGetRequest:[NSString stringWithFormat:@"api/uncheckTaxi?taxiId=%@&userId=%@",taxiId,userId]
+              withHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+                  
+                  // 1) initialize the array of JSON
+                  NSArray *array = [NSJSONSerialization JSONObjectWithData:data
+                                                                   options:0
+                                                                     error:nil];
+                  // 2) perform selector
+                  if (!array) {
+                      [calledBy performSelector:failureCallback];
+                  } else {
+                      NSLog(@"uncheckTaxi OK");
+                      [calledBy performSelector:successCallback];
+                  }
+              }];
+
+}
+
+// GET
+- (void) getTaxis:(NSString *)flightId
+        calledBy:(id)calledBy
+     withSuccess:(SEL)successCallback{
+    
+    [self getTaxis:flightId
+             calledBy:calledBy
+          withSuccess:successCallback
+           andFailure:@selector(defaultFailureCallback)];
+}
+
+- (void) getTaxis:(NSString *)flightId
+        calledBy:(id)calledBy
+     withSuccess:(SEL)successCallback
+      andFailure:(SEL)failureCallback{
+    
+    [self placeGetRequest:[NSString stringWithFormat:@"api/getTaxis?flyId=%@",flightId]
+              withHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+                  
+                  // 1) initialize the array of JSON
+                  NSArray *array = [NSJSONSerialization JSONObjectWithData:data
+                                                                   options:0
+                                                                     error:nil];
+                  // 2) perform selector
+                  if (!array) {
+                      [calledBy performSelector:failureCallback];
+                  } else {
+                      NSLog(@"getTaxis OK");
+                      [calledBy performSelector:successCallback withObject:array];
+                  }
+              }];
+
+}
 #pragma mark -
 //#pragma mark PutOnline
 //

@@ -34,8 +34,11 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    // Comprobamos el login. Si el usuario ya ha hecho login, vamos a la pantalla vuelos
     AppCore *appCore = [[AppCore alloc] init];
-    appCore getUserId
+    if ([appCore getUserId]){
+        [self performSegueWithIdentifier:@"toFlights" sender:self];
+    }
     
     fbLoginView = [[FBLoginView alloc] init];
     

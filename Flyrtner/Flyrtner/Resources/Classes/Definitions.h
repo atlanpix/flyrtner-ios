@@ -26,6 +26,8 @@ FOUNDATION_EXPORT NSString *const URL_API;
 
 FOUNDATION_EXPORT NSString *const URL_API_CHAT;
 
+FOUNDATION_EXPORT NSString *const FLIGHTS;
+
 @interface Definitions : NSObject
 
 @end

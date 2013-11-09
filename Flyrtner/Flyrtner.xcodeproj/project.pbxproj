@@ -39,6 +39,8 @@
 		E5134BCF182DD86B00805F33 /* loginFacebook-logout@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5134BC9182DD86B00805F33 /* loginFacebook-logout@2x.png */; };
 		E5134BD0182DD86B00805F33 /* loginFacebook-pushed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5134BCA182DD86B00805F33 /* loginFacebook-pushed@2x.png */; };
 		E5134BD1182DD86B00805F33 /* loginFacebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5134BCB182DD86B00805F33 /* loginFacebook@2x.png */; };
+		E5134BD5182DE11C00805F33 /* AddFlightView.m in Sources */ = {isa = PBXBuildFile; fileRef = E5134BD4182DE11C00805F33 /* AddFlightView.m */; };
+		E5134BD8182DFF4400805F33 /* DBFlightManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5134BD7182DFF4400805F33 /* DBFlightManager.m */; };
 		E5192F34182D66FB00FD21A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5192F33182D66FB00FD21A8 /* Foundation.framework */; };
 		E5192F36182D66FB00FD21A8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5192F35182D66FB00FD21A8 /* CoreGraphics.framework */; };
 		E5192F38182D66FB00FD21A8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5192F37182D66FB00FD21A8 /* UIKit.framework */; };
@@ -141,6 +143,10 @@
 		E5134BC9182DD86B00805F33 /* loginFacebook-logout@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "loginFacebook-logout@2x.png"; path = "Resources/Images/loginFacebook-logout@2x.png"; sourceTree = "<group>"; };
 		E5134BCA182DD86B00805F33 /* loginFacebook-pushed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "loginFacebook-pushed@2x.png"; path = "Resources/Images/loginFacebook-pushed@2x.png"; sourceTree = "<group>"; };
 		E5134BCB182DD86B00805F33 /* loginFacebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "loginFacebook@2x.png"; path = "Resources/Images/loginFacebook@2x.png"; sourceTree = "<group>"; };
+		E5134BD3182DE11C00805F33 /* AddFlightView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddFlightView.h; path = Flight/AddFlightView.h; sourceTree = "<group>"; };
+		E5134BD4182DE11C00805F33 /* AddFlightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddFlightView.m; path = Flight/AddFlightView.m; sourceTree = "<group>"; };
+		E5134BD6182DFF4400805F33 /* DBFlightManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBFlightManager.h; sourceTree = "<group>"; };
+		E5134BD7182DFF4400805F33 /* DBFlightManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBFlightManager.m; sourceTree = "<group>"; };
 		E5192F30182D66FB00FD21A8 /* Flyrtner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flyrtner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5192F33182D66FB00FD21A8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E5192F35182D66FB00FD21A8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -281,6 +287,8 @@
 				E5134B84182DBA7700805F33 /* DBChatManager.m */,
 				E5134B85182DBA7700805F33 /* DBMessageManager.h */,
 				E5134B86182DBA7700805F33 /* DBMessageManager.m */,
+				E5134BD6182DFF4400805F33 /* DBFlightManager.h */,
+				E5134BD7182DFF4400805F33 /* DBFlightManager.m */,
 			);
 			name = Manager;
 			path = DataBase/Manager;
@@ -387,6 +395,8 @@
 		E5192F6A182D6B7700FD21A8 /* Flight */ = {
 			isa = PBXGroup;
 			children = (
+				E5134BD3182DE11C00805F33 /* AddFlightView.h */,
+				E5134BD4182DE11C00805F33 /* AddFlightView.m */,
 				E5192F6B182D6BB800FD21A8 /* FlightCell.h */,
 				E5192F6C182D6BB800FD21A8 /* FlightCell.m */,
 				E5192F79182D6F2800FD21A8 /* FlightView.h */,
@@ -661,6 +671,7 @@
 				E5134BB1182DBF1F00805F33 /* NSData+SRB64Additions.h in Sources */,
 				E5134BB2182DBF1F00805F33 /* SocketRocket-Prefix.pch in Sources */,
 				E5134BB3182DBF1F00805F33 /* SRWebSocket.h in Sources */,
+				E5134BD5182DE11C00805F33 /* AddFlightView.m in Sources */,
 				E5134B7A182DB4B100805F33 /* NSData+SRB64Additions.m in Sources */,
 				E5192FC7182D95C100FD21A8 /* ChatView.m in Sources */,
 				E5192FAF182D808000FD21A8 /* DBAd.m in Sources */,
@@ -691,6 +702,7 @@
 				E5134BA7182DBC9800805F33 /* PushNoAnimationSegue.m in Sources */,
 				E5192F8E182D717700FD21A8 /* FlyrtnerApi.m in Sources */,
 				E5192FA9182D808000FD21A8 /* DBChat.m in Sources */,
+				E5134BD8182DFF4400805F33 /* DBFlightManager.m in Sources */,
 				E5192FF1182D9FF100FD21A8 /* Person.m in Sources */,
 				E5192F42182D66FB00FD21A8 /* main.m in Sources */,
 				E5192F49182D66FB00FD21A8 /* Flyrtner.xcdatamodeld in Sources */,

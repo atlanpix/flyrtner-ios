@@ -25,7 +25,7 @@
 @property (nonatomic, retain) IBOutlet UITextView *inputView;
 
 - (IBAction)goingUp:(id)sender;
-- (IBAction)goindDown:(id)sender;
+- (IBAction)goingDown:(id)sender;
 - (IBAction)editing:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UITextField *inputText;

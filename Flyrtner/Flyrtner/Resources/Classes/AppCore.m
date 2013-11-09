@@ -11,7 +11,7 @@
 @implementation AppCore
 
 - (NSString *) getUserId{
-    NSObject *userIdExists = [[NSUserDefaults standardUserDefaults]objectForKey:URL_API];
+    NSObject *userIdExists = [[NSUserDefaults standardUserDefaults]objectForKey:USER_ID];
     if (userIdExists){
         return (NSString *)userIdExists;
     } else {

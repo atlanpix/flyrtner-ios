@@ -10,6 +10,6 @@
 
 @implementation Flight
 
-@synthesize origin, destination, flightNumber;
+@synthesize origin, destination, flightNumber, flightId;
 
 @end

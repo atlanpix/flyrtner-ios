@@ -18,6 +18,7 @@
     Person *person;
     Flight *flight;
     NSString *userId;
+    NSString *username;
     BOOL clickOnInput;
     NSString *room;
     NSDate *lastMessageReceivedDate;
@@ -35,132 +36,15 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
--(void)roomCreateDidEnd:(id)response
+-(void)roomCreateDidEndWithFailure:(id)response
 {
-    NSLog(@"roomCreateDidEnd: OBTENIDO");
-    
-    room = response;
-    
-    // Añadimos a la base de datos el chat
-    NSString *userId = [[NSUserDefaults standardUserDefaults]objectForKey:USER_ID];
-    NSArray *chatMembers = [NSArray arrayWithObjects:userId,person.userId, nil];
-    NSDictionary *chatInfo = [NSDictionary dictionaryWithObjectsAndKeys:
-                              room, @"chatId",
-                              userId, @"creatorId",
-                              [chatMembers componentsJoinedByString:@", "], @"members", nil];
-    
-    person = [infoSegue objectForKey:@"PERSON"];
-    
-//    DBChatManager *dbChatManager = [[DBChatManager alloc] init];
-//    NSArray *messages;
-//    if (![dbChatManager chatExists:room]){
-//        [dbChatManager saveChat:chatInfo];
-//    } else {
-//        DBMessageManager *dbMessageManager = [[DBMessageManager alloc] init];
-//        messages = [dbMessageManager getMessages:room];
-//    }
-//    
-//    // Mostramos los mensajes
-//    // Inicializamos la variables _messages
-//    _messages = [[NSMutableArray alloc] init];
-//    
-//    
-//    // Miramos si hay o no hay mensajes
-//    
-//    // TODO: mirar por qué falla y da error de Memoria
-//    if ([messages count] == 0) {
-//        [noMessagesImage setHidden:false];
-//        [noMessagesLabel setHidden:false];
-//    }
-//    
-//    BOOL noMessages = true;
-//    // Recorremos el vector messages que nos ha devuelto la base de datos local
-//    for (NSManagedObject *obj in messages) {
-//        if ([[obj valueForKey:@"type"] isEqual:@"talk"]){
-//            // Calculamos si el mensaje era enviado por el usuario o por otro del canal
-//            NSData *authorImage;
-//            BOOL mine;
-//            NSString *mineString = [obj valueForKey:@"mine"];
-//            if ([mineString isEqual:@"false"]){
-//                mine = NO;
-//                NSURL* imageURL = [NSURL URLWithString:person.imageURL];
-//                authorImage = [[NSData alloc] initWithContentsOfURL:imageURL]; // Ponemos la imagen del autor del mensaje
-//            } else {
-//                mine = YES;
-//                // Ponemos la imagen del usuario
-//                if ([[NSUserDefaults standardUserDefaults] objectForKey:@"profileImage"]){
-//                    authorImage =[[NSUserDefaults standardUserDefaults] objectForKey:@"profileImage"];
-//                }
-//            }
-//            
-//            // Creamos un mensaje con el formato que podemos guardar en _messages (Message.h)
-//            Message *newMessage = [[Message alloc] initWithMessage:[obj valueForKey:@"message"] fromMe:mine author:[obj valueForKey:@"userFrom"] image:authorImage];
-//            
-//            // Lo añadimos al vector
-//            [_messages addObject:newMessage];
-//            
-//            //            // Si hay mensajes ocultamos el mensaje de que tienes que empezar a escribir un mensaje
-//            //            // lo hacemos comprobando la variable booleana hidden, para no hacerlo cada vez que extraigamos
-//            //            // un mensaje.
-//            //            if (hidden) {
-//            //                [noMessagesImage setHidden:true];
-//            //                [noMessagesLabel setHidden:true];
-//            //                // Seteamos hidden a true para que no vuelva a entrar en este if
-//            //                noMessages = false;
-//            //            }
-//        }
-//    }
-    
-    // Conectamos el socket
-    [self _reconnect];
-    
-    // Set navigation tilte with contact's name
-    self.navigationItem.title = person.name;
-    
-    // Creates picture to be shown in navigation bar
-    //     UIButton* picture = (UIButton *) [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"profile-button.png"]];
-    //     CGRect buttonFrame = picture.frame;
-    //     buttonFrame.size = CGSizeMake(34, 19);
-    //     picture.frame = buttonFrame;
-    //     UIBarButtonItem *pictureItem = [[UIBarButtonItem alloc] initWithCustomView:picture];
-    //     self.navigationItem.rightBarButtonItem = pictureItem;
-    
-    UIButton *profileButton = [UIButton buttonWithType:UIButtonTypeCustom];
-	profileButton.frame= CGRectMake(100, 0, 50, 19);
-    [[profileButton imageView] setContentMode: UIViewAutoresizingNone];
-	[profileButton setBackgroundImage: [UIImage imageNamed: @"profile-button.png"] forState:UIControlStateNormal];
-	[profileButton setBackgroundImage: [UIImage imageNamed: @"profile-button-pushed.png"] forState:UIControlStateHighlighted];
-	UIBarButtonItem *pictureItem = [[UIBarButtonItem alloc] initWithCustomView:profileButton];
-    self.navigationItem.rightBarButtonItem = pictureItem;
-    
-    
-    
-    
-    // Creates picture to be shown in navigation bar
-    //    NSURL *programImageURL = [NSURL URLWithString:person.imageURL];
-    //    SDWebImageManager *manager = [SDWebImageManager sharedManager];
-    //    [manager downloadWithURL:programImageURL
-    //                     options:0
-    //                    progress:^(NSUInteger receivedSize, long long expectedSize)
-    //     {
-    //         // progression tracking code
-    //     }
-    //                   completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished)
-    //     {
-    //         if (image)
-    //         {
-    //             // do something with image
-    //             //[cell.userButton setBackgroundImage:image forState:UIControlStateNormal];
-    //
-    //             UIButton* picture = (UIButton *) [[UIImageView alloc] initWithImage:image];
-    //             CGRect buttonFrame = picture.frame;
-    //             buttonFrame.size = CGSizeMake(38, 38);
-    //             picture.frame = buttonFrame;
-    //             UIBarButtonItem *pictureItem = [[UIBarButtonItem alloc] initWithCustomView:picture];
-    //             self.navigationItem.rightBarButtonItem = pictureItem;
-    //         }
-    //     }];
-    
+    NSLog(@"roomCreateDidEndWithFailure: ERROR");
+    [self performSegueWithIdentifier:@"toProgramChat" sender:self];
+}
+
+- (void)viewDidLoad;
+{
+    [super viewDidLoad];
     
     // Set title and subtitle
     CGRect frame = self.navigationController.navigationBar.frame;
@@ -197,17 +81,7 @@
     
     [self.tableView reloadData];
     
-}
-
--(void)roomCreateDidEndWithFailure:(id)response
-{
-    NSLog(@"roomCreateDidEndWithFailure: ERROR");
-    [self performSegueWithIdentifier:@"toProgramChat" sender:self];
-}
-
-- (void)viewDidLoad;
-{
-    [super viewDidLoad];
+    [self _reconnect];
 }
 
 - (void)_reconnect;
@@ -215,8 +89,10 @@
     _webSocket.delegate = nil;
     [_webSocket close];
     
-    NSString *userId = [[NSUserDefaults standardUserDefaults]objectForKey:USER_ID];
-    NSString *username = [[NSUserDefaults standardUserDefaults]objectForKey:PROFILE_NAME];
+    flight = [infoSegue objectForKey:@"FLIGHT"];
+    userId = [[NSUserDefaults standardUserDefaults]objectForKey:USER_ID];
+    username = [[NSUserDefaults standardUserDefaults]objectForKey:PROFILE_NAME];
+    username = [username stringByReplacingOccurrencesOfString:@" " withString:@"-"];
     NSString *url = [NSString stringWithFormat:@"ws://%@/room/chat?username=%@&userId=%@&pid=%@&typeChat=%@",URL_API_CHAT,username,userId,flight.flightNumber,@"2"];
     
     NSLog(url);
@@ -238,7 +114,7 @@
 {
     [super viewWillAppear:animated];
     
-    //[self _reconnect];
+    [self _reconnect];
 }
 
 - (void)reconnect:(id)sender;
@@ -388,9 +264,9 @@
                     [noMessagesLabel setHidden:true];
                 }
                 
-                NSURL* imageURL = [NSURL URLWithString:person.image];
-                NSData *authorImage = [[NSData alloc] initWithContentsOfURL:imageURL];
-                [_messages addObject:[[Message alloc] initWithMessage:messageJSON fromMe:NO author:userJSON image:authorImage]];
+                //NSURL* imageURL = [NSURL URLWithString:person.image];
+                //NSData *authorImage = [[NSData alloc] initWithContentsOfURL:imageURL];
+                [_messages addObject:[[Message alloc] initWithMessage:messageJSON fromMe:NO author:userJSON image:nil]];
                 
                 [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:_messages.count - 1 inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
                 
@@ -457,7 +333,7 @@
         NSString *message = [[textView.text stringByReplacingCharactersInRange:range withString:text] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         [_webSocket send:message];
         
-        NSString *authorImage = [[NSUserDefaults standardUserDefaults] objectForKey:@"profileImage"];
+        NSString *authorImage = [[NSUserDefaults standardUserDefaults] objectForKey:PROFILE_IMAGE];
         
         [_messages addObject:[[Message alloc] initWithMessage:message fromMe:YES author:userId image:authorImage]];
         
@@ -475,7 +351,7 @@
 
 - (void) animateTextField: (UITextField*) textField up: (BOOL)up
 {
-    const int movementDistance = 218;
+    const int movementDistance = 170;
     const float movementDuration = 0.3f;
     int movement = (up ? -movementDistance : movementDistance);
     
@@ -490,8 +366,8 @@
 - (IBAction)goingUp:(id)sender {
     [self animateTextField:inputText up:TRUE];
     CGRect rect = self.tableView.frame;
-    rect.size.height = rect.size.height - 218;
-    rect.origin.y = rect.origin.y + 218;
+    rect.size.height = rect.size.height - 170;//218
+    rect.origin.y = rect.origin.y + 170;
     self.tableView.frame = rect;
     clickOnInput = TRUE;
     [self scrollBottom];
@@ -500,8 +376,8 @@
 - (IBAction)goingDown:(id)sender {
     if (clickOnInput){
         CGRect rect = self.tableView.frame;
-        rect.size.height = rect.size.height + 218;
-        rect.origin.y = rect.origin.y - 218;
+        rect.size.height = rect.size.height + 170; //218
+        rect.origin.y = rect.origin.y - 170;
         self.tableView.frame = rect;
         [self animateTextField:inputText up:FALSE];
         clickOnInput = FALSE;
@@ -593,7 +469,7 @@
 }
 
 - (IBAction)editing:(id)sender {
-    [_webSocket send:[NSString stringWithFormat:@"{\"type\":\"0\"}"]];
+    //[_webSocket send:[NSString stringWithFormat:@"{\"type\":\"0\"}"]];
 }
 
 // Calcula la string que debe aparecer con la última conexión del otro usuario

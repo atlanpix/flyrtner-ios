@@ -13,5 +13,6 @@
 @property NSString *origin;
 @property NSString *destination;
 @property NSString *flightNumber;
+@property NSString *flightId;
 
 @end

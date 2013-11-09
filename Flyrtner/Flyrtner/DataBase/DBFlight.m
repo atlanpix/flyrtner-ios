@@ -14,5 +14,6 @@
 @dynamic destination;
 @dynamic flightNumber;
 @dynamic origin;
+@dynamic flightId;
 
 @end

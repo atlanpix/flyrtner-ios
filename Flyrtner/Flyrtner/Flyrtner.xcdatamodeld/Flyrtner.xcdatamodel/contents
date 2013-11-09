@@ -16,6 +16,7 @@
     </entity>
     <entity name="DBFlight" representedClassName="DBFlight" syncable="YES">
         <attribute name="destination" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="flightId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="flightNumber" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="origin" optional="YES" attributeType="String" syncable="YES"/>
     </entity>

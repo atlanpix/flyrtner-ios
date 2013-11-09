@@ -16,11 +16,11 @@
 #pragma mark -
 #pragma mark Flights
 
-- (void) getFlight:(NSString *)flightNumber
+- (void) flight:(NSDictionary *)data
        calledBy:(id)calledBy
     withSuccess:(SEL)successCallback;
 
-- (void) getFlight:(NSString *)flightNumber
+- (void) flight:(NSDictionary *)data
            calledBy:(id)calledBy
         withSuccess:(SEL)successCallback
          andFailure:(SEL)failureCallback;
@@ -36,6 +36,53 @@
                withSuccess:(SEL)successCallback
                 andFailure:(SEL)failureCallback;
 
+#pragma mark -
+
+#pragma mark Taxi
+- (void) createTaxi:(NSDictionary *)data
+              calledBy:(id)calledBy
+           withSuccess:(SEL)successCallback;
+
+- (void) createTaxi:(NSDictionary *)data
+              calledBy:(id)calledBy
+           withSuccess:(SEL)successCallback
+            andFailure:(SEL)failureCallback;
+
+
+- (void) checkTaxi:(NSString *)taxiId
+            userId:(NSString *)userId
+          isOnline:(BOOL)isOnline
+          calledBy:(id)calledBy
+       withSuccess:(SEL)successCallback;
+
+- (void) checkTaxi:(NSString *)taxiId
+            userId:(NSString *)userId
+          calledBy:(id)calledBy
+       withSuccess:(SEL)successCallback
+        andFailure:(SEL)failureCallback;
+
+
+- (void) uncheckTaxi:(NSString *)taxiId
+            userId:(NSString *)userId
+          isOnline:(BOOL)isOnline
+          calledBy:(id)calledBy
+       withSuccess:(SEL)successCallback;
+
+- (void) uncheckTaxi:(NSString *)taxiId
+            userId:(NSString *)userId
+          calledBy:(id)calledBy
+       withSuccess:(SEL)successCallback
+        andFailure:(SEL)failureCallback;
+
+
+- (void) getTaxis:(NSString *)flightId
+                calledBy:(id)calledBy
+             withSuccess:(SEL)successCallback;
+
+- (void) getTaxis:(NSString *)flightId
+                calledBy:(id)calledBy
+             withSuccess:(SEL)successCallback
+              andFailure:(SEL)failureCallback;
 #pragma mark -
 //
 //#pragma mark PutOnline

@@ -11,13 +11,14 @@
 @interface FlightView (){
     FlyrtnerApi *flyrtnerAPI;
     NSMutableArray *flights;
+    DBFlightManager *dbFlightManager;
 }
 
 @end
 
 @implementation FlightView
 
-@synthesize flightTable;
+@synthesize flightTable, infoSegue;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,35 +34,52 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    // Ocultamos el botón de ir atrás
+    self.navigationItem.hidesBackButton = YES;
+    
     // Put delegates to flight table
     [flightTable setDataSource:self];
 	[flightTable setDelegate:self];
     
     // Init flights
-    flights = [[NSMutableArray alloc] init];
     
     /*[flyrtnerAPI getFlights:@"0"
                    calledBy:self
                 withSuccess:@selector(getFlightsDidEnd:)];*/
     
-    Flight *flightExample1 = [[Flight alloc]init];
-    flightExample1.flightNumber = @"VY1190";
-    flightExample1.origin = @"LGW";
-    flightExample1.destination = @"BCN";
+//    Flight *flightExample1 = [[Flight alloc]init];
+//    flightExample1.flightNumber = @"VY1234";
+//    flightExample1.origin = @"CLV";
+//    flightExample1.destination = @"BCN";
+//    
+//    Flight *flightExample2 = [[Flight alloc]init];
+//    flightExample2.flightNumber = @"VY7101";
+//    flightExample2.origin = @"TFE";
+//    flightExample2.destination = @"LPA";
+//    
+//    Flight *flightExample3 = [[Flight alloc]init];
+//    flightExample3.flightNumber = @"VY1961";
+//    flightExample3.origin = @"LND";
+//    flightExample3.destination = @"LPA";
+//    
+//    [flights addObject:flightExample1];
+//    [flights addObject:flightExample2];
+//    [flights addObject:flightExample3];
     
-    Flight *flightExample2 = [[Flight alloc]init];
-    flightExample2.flightNumber = @"VY7101";
-    flightExample2.origin = @"TFE";
-    flightExample2.destination = @"LPA";
+    [self getFlightsFromDataBase];
     
-    Flight *flightExample3 = [[Flight alloc]init];
-    flightExample3.flightNumber = @"VY1961";
-    flightExample3.origin = @"LND";
-    flightExample3.destination = @"LPA";
-    
-    [flights addObject:flightExample1];
-    [flights addObject:flightExample2];
-    [flights addObject:flightExample3];
+    if ([infoSegue objectForKey:@"FLIGHT_NUMBER"]){
+        NSString *flightNumber = (NSString *)[infoSegue objectForKey:@"FLIGHT_NUMBER"];
+        flyrtnerAPI = [[FlyrtnerApi alloc] init];
+        AppCore *appCore = [[AppCore alloc] init];
+        NSString *userId = [appCore getUserId];
+        NSDictionary *info = [NSDictionary dictionaryWithObjectsAndKeys:
+                              flightNumber,@"flyNumber",
+                              userId,@"user_id", nil];
+        [flyrtnerAPI flight:info
+                      calledBy:self
+                   withSuccess:@selector(flightDidEnd:)];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -147,11 +165,57 @@
     NSLog(@"defaultCallback");
 }
 
--(void)getFlightsDidEnd:(NSArray *)result{
-    NSLog(@"getFlightsDidEnd");
-    for (NSDictionary *item in result) {
-        Flight *flight = [[Flight alloc] init];
+-(void)flightDidEnd:(NSDictionary *)result{
+    NSLog(@"flightDidEnd");
+    Flight *flight = [[Flight alloc] init];
+    flight.flightId = [result objectForKey:@"id"];
+    flight.origin = [result objectForKey:@"origin"];
+    flight.destination = [result objectForKey:@"destination"];
+    flight.flightNumber = [result objectForKey:@"flyNumber"];
+    
+    if (flights == nil){
+        flights = [[NSMutableArray alloc] init];
+    }
+    [flights addObject:flight];
+    
+    [self.flightTable reloadData];
+    
+    NSDictionary *flightInfo = [NSDictionary dictionaryWithObjectsAndKeys:
+                   flight.flightId, @"flightId",
+                   flight.flightNumber, @"flightNumber",
+                   flight.origin, @"origin",
+                   flight.destination, @"destination",
+                   nil];
+    
+    if (flightInfo){
+        [dbFlightManager saveFlight:flightInfo];
     }
 }
+
+-(void)getFlightsFromDataBase{
+    dbFlightManager = [[DBFlightManager alloc] init];
+    NSArray *response;
+    response = [dbFlightManager getFlights];
+    
+    // Mostramos los mensajes
+    // Inicializamos la variables _messages
+    flights = [[NSMutableArray alloc] init];
+    
+    // Recorremos el vector messages que nos ha devuelto la base de datos local
+    for (NSManagedObject *obj in response) {
+        // Creamos un mensaje con el formato que podemos guardar en _messages (Message.h)
+        Flight *newFlight = [[Flight alloc] init];
+        newFlight.flightId = [obj valueForKey:@"flightId"];
+        newFlight.flightNumber = [obj valueForKey:@"flightNumber"];
+        newFlight.origin = [obj valueForKey:@"origin"];
+        newFlight.destination = [obj valueForKey:@"destination"];
+        
+        // Lo añadimos al vector
+        [flights addObject:newFlight];
+    }
+        
+    [self.flightTable reloadData];
+}
+
 #pragma mark -
 @end

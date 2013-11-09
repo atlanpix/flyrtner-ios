@@ -15,5 +15,6 @@
 @property (nonatomic, retain) NSString * destination;
 @property (nonatomic, retain) NSString * flightNumber;
 @property (nonatomic, retain) NSString * origin;
+@property (nonatomic, retain) NSString * flightId;
 
 @end

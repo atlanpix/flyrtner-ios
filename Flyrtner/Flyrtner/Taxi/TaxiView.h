@@ -10,5 +10,6 @@
 #import "FlyrtnerApi.h"
 
 @interface TaxiView : UIViewController
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

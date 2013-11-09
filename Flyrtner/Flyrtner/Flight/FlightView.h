@@ -11,9 +11,13 @@
 #import "FlyrtnerApi.h"
 #import "Flight.h"
 #import "ChatView.h"
+#import "DBFlight.h"
+#import "DBFlightManager.h"
 
 @interface FlightView : UIViewController<UITableViewDataSource,UITableViewDelegate,NSURLConnectionDataDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *flightTable;
+
+@property (strong, nonatomic) NSDictionary *infoSegue;
 
 @end
