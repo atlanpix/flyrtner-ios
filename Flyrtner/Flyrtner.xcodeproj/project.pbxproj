@@ -7,6 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E5134B76182DB4B100805F33 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5134B6A182DB4B100805F33 /* FacebookSDK.framework */; };
+		E5134B79182DB4B100805F33 /* base64.c in Sources */ = {isa = PBXBuildFile; fileRef = E5134B6F182DB4B100805F33 /* base64.c */; };
+		E5134B7A182DB4B100805F33 /* NSData+SRB64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = E5134B72182DB4B100805F33 /* NSData+SRB64Additions.m */; };
+		E5134B7B182DB4B100805F33 /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = E5134B75182DB4B100805F33 /* SRWebSocket.m */; };
+		E5134B87182DBA7700805F33 /* DBChatManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5134B84182DBA7700805F33 /* DBChatManager.m */; };
+		E5134B88182DBA7700805F33 /* DBMessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5134B86182DBA7700805F33 /* DBMessageManager.m */; };
+		E5134B96182DBB1D00805F33 /* AppDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5134B90182DBB1D00805F33 /* AppDataModel.m */; };
+		E5134B9E182DBC8D00805F33 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5134B9D182DBC8D00805F33 /* TabBarController.m */; };
+		E5134BA5182DBC9800805F33 /* DateFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E5134BA0182DBC9800805F33 /* DateFactory.m */; };
+		E5134BA6182DBC9800805F33 /* Definitions.m in Sources */ = {isa = PBXBuildFile; fileRef = E5134BA2182DBC9800805F33 /* Definitions.m */; };
+		E5134BA7182DBC9800805F33 /* PushNoAnimationSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = E5134BA4182DBC9800805F33 /* PushNoAnimationSegue.m */; };
+		E5134BA9182DBD8D00805F33 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5134BA8182DBD8D00805F33 /* SystemConfiguration.framework */; };
+		E5134BAB182DBDA000805F33 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5134BAA182DBDA000805F33 /* Social.framework */; };
+		E5134BAD182DBDA600805F33 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5134BAC182DBDA600805F33 /* Accounts.framework */; };
+		E5134BAF182DBDAB00805F33 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5134BAE182DBDAB00805F33 /* Security.framework */; };
+		E5134BB0182DBF1F00805F33 /* base64.h in Sources */ = {isa = PBXBuildFile; fileRef = E5134B70182DB4B100805F33 /* base64.h */; };
+		E5134BB1182DBF1F00805F33 /* NSData+SRB64Additions.h in Sources */ = {isa = PBXBuildFile; fileRef = E5134B71182DB4B100805F33 /* NSData+SRB64Additions.h */; };
+		E5134BB2182DBF1F00805F33 /* SocketRocket-Prefix.pch in Sources */ = {isa = PBXBuildFile; fileRef = E5134B73182DB4B100805F33 /* SocketRocket-Prefix.pch */; };
+		E5134BB3182DBF1F00805F33 /* SRWebSocket.h in Sources */ = {isa = PBXBuildFile; fileRef = E5134B74182DB4B100805F33 /* SRWebSocket.h */; };
+		E5134BB5182DBF7600805F33 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5134BB4182DBF7600805F33 /* CFNetwork.framework */; };
+		E5134BB7182DBF7B00805F33 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E5134BB6182DBF7B00805F33 /* libicucore.dylib */; };
 		E5192F34182D66FB00FD21A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5192F33182D66FB00FD21A8 /* Foundation.framework */; };
 		E5192F36182D66FB00FD21A8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5192F35182D66FB00FD21A8 /* CoreGraphics.framework */; };
 		E5192F38182D66FB00FD21A8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5192F37182D66FB00FD21A8 /* UIKit.framework */; };
@@ -28,7 +49,6 @@
 		E5192F8C182D717700FD21A8 /* BaseApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E5192F87182D717700FD21A8 /* BaseApi.m */; };
 		E5192F8D182D717700FD21A8 /* ChatApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E5192F89182D717700FD21A8 /* ChatApi.m */; };
 		E5192F8E182D717700FD21A8 /* FlyrtnerApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E5192F8B182D717700FD21A8 /* FlyrtnerApi.m */; };
-		E5192F91182D719B00FD21A8 /* Definitions.m in Sources */ = {isa = PBXBuildFile; fileRef = E5192F90182D719B00FD21A8 /* Definitions.m */; };
 		E5192FA6182D807F00FD21A8 /* DBUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E5192FA5182D807F00FD21A8 /* DBUser.m */; };
 		E5192FA9182D808000FD21A8 /* DBChat.m in Sources */ = {isa = PBXBuildFile; fileRef = E5192FA8182D808000FD21A8 /* DBChat.m */; };
 		E5192FAC182D808000FD21A8 /* DBFlight.m in Sources */ = {isa = PBXBuildFile; fileRef = E5192FAB182D808000FD21A8 /* DBFlight.m */; };
@@ -68,6 +88,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E5134B6A182DB4B100805F33 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		E5134B6F182DB4B100805F33 /* base64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = base64.c; sourceTree = "<group>"; };
+		E5134B70182DB4B100805F33 /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base64.h; sourceTree = "<group>"; };
+		E5134B71182DB4B100805F33 /* NSData+SRB64Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+SRB64Additions.h"; sourceTree = "<group>"; };
+		E5134B72182DB4B100805F33 /* NSData+SRB64Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+SRB64Additions.m"; sourceTree = "<group>"; };
+		E5134B73182DB4B100805F33 /* SocketRocket-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocketRocket-Prefix.pch"; sourceTree = "<group>"; };
+		E5134B74182DB4B100805F33 /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
+		E5134B75182DB4B100805F33 /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRWebSocket.m; sourceTree = "<group>"; };
+		E5134B83182DBA7700805F33 /* DBChatManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBChatManager.h; sourceTree = "<group>"; };
+		E5134B84182DBA7700805F33 /* DBChatManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBChatManager.m; sourceTree = "<group>"; };
+		E5134B85182DBA7700805F33 /* DBMessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBMessageManager.h; sourceTree = "<group>"; };
+		E5134B86182DBA7700805F33 /* DBMessageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBMessageManager.m; sourceTree = "<group>"; };
+		E5134B8F182DBB1D00805F33 /* AppDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDataModel.h; path = DataBase/AppDataModel.h; sourceTree = "<group>"; };
+		E5134B90182DBB1D00805F33 /* AppDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDataModel.m; path = DataBase/AppDataModel.m; sourceTree = "<group>"; };
+		E5134B9C182DBC8D00805F33 /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		E5134B9D182DBC8D00805F33 /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		E5134B9F182DBC9800805F33 /* DateFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateFactory.h; path = Resources/Classes/DateFactory.h; sourceTree = "<group>"; };
+		E5134BA0182DBC9800805F33 /* DateFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateFactory.m; path = Resources/Classes/DateFactory.m; sourceTree = "<group>"; };
+		E5134BA1182DBC9800805F33 /* Definitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Definitions.h; path = Resources/Classes/Definitions.h; sourceTree = "<group>"; };
+		E5134BA2182DBC9800805F33 /* Definitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Definitions.m; path = Resources/Classes/Definitions.m; sourceTree = "<group>"; };
+		E5134BA3182DBC9800805F33 /* PushNoAnimationSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PushNoAnimationSegue.h; path = Resources/Classes/PushNoAnimationSegue.h; sourceTree = "<group>"; };
+		E5134BA4182DBC9800805F33 /* PushNoAnimationSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PushNoAnimationSegue.m; path = Resources/Classes/PushNoAnimationSegue.m; sourceTree = "<group>"; };
+		E5134BA8182DBD8D00805F33 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E5134BAA182DBDA000805F33 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		E5134BAC182DBDA600805F33 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		E5134BAE182DBDAB00805F33 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		E5134BB4182DBF7600805F33 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		E5134BB6182DBF7B00805F33 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		E5192F30182D66FB00FD21A8 /* Flyrtner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flyrtner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5192F33182D66FB00FD21A8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E5192F35182D66FB00FD21A8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -97,8 +145,6 @@
 		E5192F89182D717700FD21A8 /* ChatApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChatApi.m; path = API/ChatApi.m; sourceTree = "<group>"; };
 		E5192F8A182D717700FD21A8 /* FlyrtnerApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlyrtnerApi.h; path = API/FlyrtnerApi.h; sourceTree = "<group>"; };
 		E5192F8B182D717700FD21A8 /* FlyrtnerApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlyrtnerApi.m; path = API/FlyrtnerApi.m; sourceTree = "<group>"; };
-		E5192F8F182D719B00FD21A8 /* Definitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Definitions.h; sourceTree = "<group>"; };
-		E5192F90182D719B00FD21A8 /* Definitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Definitions.m; sourceTree = "<group>"; };
 		E5192FA4182D807F00FD21A8 /* DBUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBUser.h; path = DataBase/DBUser.h; sourceTree = "<group>"; };
 		E5192FA5182D807F00FD21A8 /* DBUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBUser.m; path = DataBase/DBUser.m; sourceTree = "<group>"; };
 		E5192FA7182D808000FD21A8 /* DBChat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBChat.h; path = DataBase/DBChat.h; sourceTree = "<group>"; };
@@ -148,7 +194,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5134BB7182DBF7B00805F33 /* libicucore.dylib in Frameworks */,
+				E5134BB5182DBF7600805F33 /* CFNetwork.framework in Frameworks */,
+				E5134BAF182DBDAB00805F33 /* Security.framework in Frameworks */,
+				E5134BAD182DBDA600805F33 /* Accounts.framework in Frameworks */,
+				E5134BAB182DBDA000805F33 /* Social.framework in Frameworks */,
+				E5134BA9182DBD8D00805F33 /* SystemConfiguration.framework in Frameworks */,
 				E5192F36182D66FB00FD21A8 /* CoreGraphics.framework in Frameworks */,
+				E5134B76182DB4B100805F33 /* FacebookSDK.framework in Frameworks */,
 				E5192F3A182D66FB00FD21A8 /* CoreData.framework in Frameworks */,
 				E5192F38182D66FB00FD21A8 /* UIKit.framework in Frameworks */,
 				E5192F34182D66FB00FD21A8 /* Foundation.framework in Frameworks */,
@@ -169,6 +222,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E5134B69182DB2FE00805F33 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E5134B9F182DBC9800805F33 /* DateFactory.h */,
+				E5134BA0182DBC9800805F33 /* DateFactory.m */,
+				E5134BA3182DBC9800805F33 /* PushNoAnimationSegue.h */,
+				E5134BA4182DBC9800805F33 /* PushNoAnimationSegue.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		E5134B6E182DB4B100805F33 /* SocketRocket */ = {
+			isa = PBXGroup;
+			children = (
+				E5134B6F182DB4B100805F33 /* base64.c */,
+				E5134B70182DB4B100805F33 /* base64.h */,
+				E5134B71182DB4B100805F33 /* NSData+SRB64Additions.h */,
+				E5134B72182DB4B100805F33 /* NSData+SRB64Additions.m */,
+				E5134B73182DB4B100805F33 /* SocketRocket-Prefix.pch */,
+				E5134B74182DB4B100805F33 /* SRWebSocket.h */,
+				E5134B75182DB4B100805F33 /* SRWebSocket.m */,
+			);
+			path = SocketRocket;
+			sourceTree = "<group>";
+		};
+		E5134B82182DBA7700805F33 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				E5134B83182DBA7700805F33 /* DBChatManager.h */,
+				E5134B84182DBA7700805F33 /* DBChatManager.m */,
+				E5134B85182DBA7700805F33 /* DBMessageManager.h */,
+				E5134B86182DBA7700805F33 /* DBMessageManager.m */,
+			);
+			name = Manager;
+			path = DataBase/Manager;
+			sourceTree = "<group>";
+		};
 		E5192F27182D66FB00FD21A8 = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +281,14 @@
 		E5192F32182D66FB00FD21A8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E5134BB6182DBF7B00805F33 /* libicucore.dylib */,
+				E5134BB4182DBF7600805F33 /* CFNetwork.framework */,
+				E5134BAE182DBDAB00805F33 /* Security.framework */,
+				E5134BAC182DBDA600805F33 /* Accounts.framework */,
+				E5134BAA182DBDA000805F33 /* Social.framework */,
+				E5134BA8182DBD8D00805F33 /* SystemConfiguration.framework */,
+				E5134B6A182DB4B100805F33 /* FacebookSDK.framework */,
+				E5134B6E182DB4B100805F33 /* SocketRocket */,
 				E5192F33182D66FB00FD21A8 /* Foundation.framework */,
 				E5192F35182D66FB00FD21A8 /* CoreGraphics.framework */,
 				E5192F37182D66FB00FD21A8 /* UIKit.framework */,
@@ -203,6 +301,8 @@
 		E5192F3B182D66FB00FD21A8 /* Flyrtner */ = {
 			isa = PBXGroup;
 			children = (
+				E5134BA1182DBC9800805F33 /* Definitions.h */,
+				E5134BA2182DBC9800805F33 /* Definitions.m */,
 				E5192FB3182D808400FD21A8 /* Model */,
 				E5192FA3182D806200FD21A8 /* DataBase */,
 				E5192F92182D7FBD00FD21A8 /* Controllers */,
@@ -212,8 +312,6 @@
 				E5192F4A182D66FB00FD21A8 /* Images.xcassets */,
 				E5192F3C182D66FB00FD21A8 /* Supporting Files */,
 				E5192F68182D67DE00FD21A8 /* Flyrtner.storyboard */,
-				E5192F8F182D719B00FD21A8 /* Definitions.h */,
-				E5192F90182D719B00FD21A8 /* Definitions.m */,
 				E5192F74182D6D3800FD21A8 /* Resources */,
 			);
 			path = Flyrtner;
@@ -293,6 +391,7 @@
 		E5192F74182D6D3800FD21A8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E5134B69182DB2FE00805F33 /* Classes */,
 				E5192F75182D6D4000FD21A8 /* Images */,
 			);
 			name = Resources;
@@ -326,6 +425,8 @@
 		E5192F92182D7FBD00FD21A8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E5134B9C182DBC8D00805F33 /* TabBarController.h */,
+				E5134B9D182DBC8D00805F33 /* TabBarController.m */,
 				E5192FCB182D964700FD21A8 /* Conversation */,
 				E5192F72182D6D0700FD21A8 /* Taxi */,
 				E5192F71182D6CF300FD21A8 /* Chat */,
@@ -338,6 +439,9 @@
 		E5192FA3182D806200FD21A8 /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
+				E5134B8F182DBB1D00805F33 /* AppDataModel.h */,
+				E5134B90182DBB1D00805F33 /* AppDataModel.m */,
+				E5134B82182DBA7700805F33 /* Manager */,
 				E5192F47182D66FB00FD21A8 /* Flyrtner.xcdatamodeld */,
 				E5192FB0182D808000FD21A8 /* DBMessage.h */,
 				E5192FB1182D808000FD21A8 /* DBMessage.m */,
@@ -498,29 +602,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5134BB0182DBF1F00805F33 /* base64.h in Sources */,
+				E5134BB1182DBF1F00805F33 /* NSData+SRB64Additions.h in Sources */,
+				E5134BB2182DBF1F00805F33 /* SocketRocket-Prefix.pch in Sources */,
+				E5134BB3182DBF1F00805F33 /* SRWebSocket.h in Sources */,
+				E5134B7A182DB4B100805F33 /* NSData+SRB64Additions.m in Sources */,
 				E5192FC7182D95C100FD21A8 /* ChatView.m in Sources */,
 				E5192FAF182D808000FD21A8 /* DBAd.m in Sources */,
+				E5134B79182DB4B100805F33 /* base64.c in Sources */,
 				E5192F46182D66FB00FD21A8 /* AppDelegate.m in Sources */,
 				E5192FAC182D808000FD21A8 /* DBFlight.m in Sources */,
 				E5192FB2182D808000FD21A8 /* DBMessage.m in Sources */,
 				E5192F8C182D717700FD21A8 /* BaseApi.m in Sources */,
 				E5192FD1182D96B000FD21A8 /* ConversationView.m in Sources */,
 				E5192FD4182D96C900FD21A8 /* ConversationCell.m in Sources */,
+				E5134BA6182DBC9800805F33 /* Definitions.m in Sources */,
 				E5192F6D182D6BB800FD21A8 /* FlightCell.m in Sources */,
-				E5192F91182D719B00FD21A8 /* Definitions.m in Sources */,
+				E5134B7B182DB4B100805F33 /* SRWebSocket.m in Sources */,
 				E5192FC1182D955500FD21A8 /* PeopleView.m in Sources */,
 				E5192FA6182D807F00FD21A8 /* DBUser.m in Sources */,
+				E5134BA5182DBC9800805F33 /* DateFactory.m in Sources */,
+				E5134B96182DBB1D00805F33 /* AppDataModel.m in Sources */,
 				E5192FF7182DA0C100FD21A8 /* Message.m in Sources */,
+				E5134B87182DBA7700805F33 /* DBChatManager.m in Sources */,
 				E5192FDA182D96FD00FD21A8 /* TaxiView.m in Sources */,
+				E5134B88182DBA7700805F33 /* DBMessageManager.m in Sources */,
 				E5192FEE182D9F7900FD21A8 /* Taxi.m in Sources */,
 				E5192FD7182D96E600FD21A8 /* TaxiCell.m in Sources */,
 				E5192FB6182D809F00FD21A8 /* Flight.m in Sources */,
+				E5134BA7182DBC9800805F33 /* PushNoAnimationSegue.m in Sources */,
 				E5192F8E182D717700FD21A8 /* FlyrtnerApi.m in Sources */,
 				E5192FA9182D808000FD21A8 /* DBChat.m in Sources */,
 				E5192FF1182D9FF100FD21A8 /* Person.m in Sources */,
 				E5192F42182D66FB00FD21A8 /* main.m in Sources */,
 				E5192F49182D66FB00FD21A8 /* Flyrtner.xcdatamodeld in Sources */,
 				E5192F8D182D717700FD21A8 /* ChatApi.m in Sources */,
+				E5134B9E182DBC8D00805F33 /* TabBarController.m in Sources */,
 				E5192F7B182D6F2800FD21A8 /* FlightView.m in Sources */,
 				E5192FFA182DA2C000FD21A8 /* PeopleCell.m in Sources */,
 			);
@@ -643,9 +760,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/Enri/Development/Vueling/flyrtner-ios/Flyrtner",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Flyrtner/Flyrtner-Prefix.pch";
 				INFOPLIST_FILE = "Flyrtner/Flyrtner-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/Enri/Development/Vueling/flyrtner-ios/Flyrtner",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -656,9 +782,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/Enri/Development/Vueling/flyrtner-ios/Flyrtner",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Flyrtner/Flyrtner-Prefix.pch";
 				INFOPLIST_FILE = "Flyrtner/Flyrtner-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/Enri/Development/Vueling/flyrtner-ios/Flyrtner",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

@@ -132,9 +132,12 @@
                                  [flights objectAtIndex:indexPath.row],@"FLIGHT",
                                  nil];
 		
-        ChatView *chatViewController = [[ChatView alloc] init];
-        UITabBarController *tbc = [segue destinationViewController];
-        chatViewController = (ChatView *)[[tbc customizableViewControllers] objectAtIndex:0];
+        UITabBarController *tabar = segue.destinationViewController;
+        // Enviamos a la pestaña Info
+        ChatView *programViewcontrollertabar = [tabar.viewControllers objectAtIndex:0];
+        [programViewcontrollertabar setInfoSegue:info];
+        // Enviamos al tabBar
+        [[segue destinationViewController] setInfoSegue:info];
     }
 }
 

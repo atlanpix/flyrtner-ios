@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ConversationCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *image;
+@property (weak, nonatomic) IBOutlet UILabel *name;
+@property (weak, nonatomic) IBOutlet UITextView *message;
 
 @end

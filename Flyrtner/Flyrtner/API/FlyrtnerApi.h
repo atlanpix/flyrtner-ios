@@ -16,11 +16,11 @@
 #pragma mark -
 #pragma mark Flights
 
-- (void) getFlights:(NSString *)pageNumber
+- (void) getFlight:(NSString *)flightNumber
        calledBy:(id)calledBy
     withSuccess:(SEL)successCallback;
 
-- (void) getFlights:(NSString *)pageNumber
+- (void) getFlight:(NSString *)flightNumber
            calledBy:(id)calledBy
         withSuccess:(SEL)successCallback
          andFailure:(SEL)failureCallback;
@@ -37,93 +37,93 @@
                 andFailure:(SEL)failureCallback;
 
 #pragma mark -
-
-#pragma mark PutOnline
-/** PUT: /api/online (idUser:String,online:Boolean) */
-- (void) putOnline:(NSString *)userId
-          isOnline:(BOOL)isOnline
-          calledBy:(id)calledBy
-       withSuccess:(SEL)successCallback;
-
-/** PUT: /api/online (idUser:String,online:Boolean) */
-- (void) putOnline:(NSString *)userId
-          isOnline:(BOOL)isOnline
-          calledBy:(id)calledBy
-       withSuccess:(SEL)successCallback
-        andFailure:(SEL)failureCallback;
-
-#pragma mark -
-
-#pragma mark LastMessages
-
-/** GET: /api/lastMessages(idUser:String) */
-- (void) getLastMessages:(NSString *)userId
-                calledBy:(id)calledBy
-             withSuccess:(SEL)successCallback;
-
-/** GET: /api/lastMessages(idUser:String) */
-- (void) getLastMessages:(NSString *)userId
-                calledBy:(id)calledBy
-             withSuccess:(SEL)successCallback
-              andFailure:(SEL)failureCallback;
-
-#pragma mark -
-#pragma mark UsersFlight
-
-/** GET: /api/getUsersFlight(flightId:String) */
-- (void) getUsersFlight:(NSString *)flightId
-                calledBy:(id)calledBy
-             withSuccess:(SEL)successCallback;
-
-/** GET: /api/getUsersFlight(flightId:String) */
-- (void) getUsersFlight:(NSString *)flightId
-                calledBy:(id)calledBy
-             withSuccess:(SEL)successCallback
-              andFailure:(SEL)failureCallback;
-
-#pragma mark -
-#pragma mark AllUser
-
-/** GET: /api/getAllUser(numPag:Integer)*/
-- (void) getAllUser:(NSString *)pageNumber
-           calledBy:(id)calledBy
-        withSuccess:(SEL)successCallback;
-
-/** GET: /api/getAllUser(numPag:Integer)*/
-- (void) getAllUser:(NSString *)pageNumber
-           calledBy:(id)calledBy
-        withSuccess:(SEL)successCallback
-         andFailure:(SEL)failureCallback;
-#pragma mark -
-
-#pragma mark FlightCheckIn
-
-- (void) postFlightCheckIn:(NSDictionary *)data
-                   calledBy:(id)calledBy withSuccess:(SEL)successCallback;
-
-- (void) postFlightCheckIn:(NSDictionary *)data
-                   calledBy:(id)calledBy
-                withSuccess:(SEL)successCallback
-                 andFailure:(SEL)failureCallback;
-
-#pragma mark -
-#pragma mark getUsersFlightFriend
-/** GET: /api/getUsersFlightFriend(flightId:String,userId:String)*/
-- (void) getUsersFlightFriend:(NSString *)flightId
-                        userId:(NSString *)userId
-                          view:(id)view
-                      calledBy:(id)calledBy
-                   withSuccess:(SEL)successCallback;
-
-/** GET: /api/getUsersFlightFriend(numPag:Integer)*/
-- (void) getUsersFlightFriend:(NSString *)flightId
-                        userId:(NSString *)userId
-                          view:(id)view
-                      calledBy:(id)calledBy
-                   withSuccess:(SEL)successCallback
-                    andFailure:(SEL)failureCallback;
-
-#pragma mark -
+//
+//#pragma mark PutOnline
+///** PUT: /api/online (idUser:String,online:Boolean) */
+//- (void) putOnline:(NSString *)userId
+//          isOnline:(BOOL)isOnline
+//          calledBy:(id)calledBy
+//       withSuccess:(SEL)successCallback;
+//
+///** PUT: /api/online (idUser:String,online:Boolean) */
+//- (void) putOnline:(NSString *)userId
+//          isOnline:(BOOL)isOnline
+//          calledBy:(id)calledBy
+//       withSuccess:(SEL)successCallback
+//        andFailure:(SEL)failureCallback;
+//
+//#pragma mark -
+//
+//#pragma mark LastMessages
+//
+///** GET: /api/lastMessages(idUser:String) */
+//- (void) getLastMessages:(NSString *)userId
+//                calledBy:(id)calledBy
+//             withSuccess:(SEL)successCallback;
+//
+///** GET: /api/lastMessages(idUser:String) */
+//- (void) getLastMessages:(NSString *)userId
+//                calledBy:(id)calledBy
+//             withSuccess:(SEL)successCallback
+//              andFailure:(SEL)failureCallback;
+//
+//#pragma mark -
+//#pragma mark UsersFlight
+//
+///** GET: /api/getUsersFlight(flightId:String) */
+//- (void) getUsersFlight:(NSString *)flightId
+//                calledBy:(id)calledBy
+//             withSuccess:(SEL)successCallback;
+//
+///** GET: /api/getUsersFlight(flightId:String) */
+//- (void) getUsersFlight:(NSString *)flightId
+//                calledBy:(id)calledBy
+//             withSuccess:(SEL)successCallback
+//              andFailure:(SEL)failureCallback;
+//
+//#pragma mark -
+//#pragma mark AllUser
+//
+///** GET: /api/getAllUser(numPag:Integer)*/
+//- (void) getAllUser:(NSString *)pageNumber
+//           calledBy:(id)calledBy
+//        withSuccess:(SEL)successCallback;
+//
+///** GET: /api/getAllUser(numPag:Integer)*/
+//- (void) getAllUser:(NSString *)pageNumber
+//           calledBy:(id)calledBy
+//        withSuccess:(SEL)successCallback
+//         andFailure:(SEL)failureCallback;
+//#pragma mark -
+//
+//#pragma mark FlightCheckIn
+//
+//- (void) postFlightCheckIn:(NSDictionary *)data
+//                   calledBy:(id)calledBy withSuccess:(SEL)successCallback;
+//
+//- (void) postFlightCheckIn:(NSDictionary *)data
+//                   calledBy:(id)calledBy
+//                withSuccess:(SEL)successCallback
+//                 andFailure:(SEL)failureCallback;
+//
+//#pragma mark -
+//#pragma mark getUsersFlightFriend
+///** GET: /api/getUsersFlightFriend(flightId:String,userId:String)*/
+//- (void) getUsersFlightFriend:(NSString *)flightId
+//                        userId:(NSString *)userId
+//                          view:(id)view
+//                      calledBy:(id)calledBy
+//                   withSuccess:(SEL)successCallback;
+//
+///** GET: /api/getUsersFlightFriend(numPag:Integer)*/
+//- (void) getUsersFlightFriend:(NSString *)flightId
+//                        userId:(NSString *)userId
+//                          view:(id)view
+//                      calledBy:(id)calledBy
+//                   withSuccess:(SEL)successCallback
+//                    andFailure:(SEL)failureCallback;
+//
+//#pragma mark -
 #pragma mark Failure Callbacks
 
 - (void) defaultFailureCallback;
