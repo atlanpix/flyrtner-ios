@@ -340,7 +340,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="SdJ-gH-GDm"/>
                     <connections>
-                        <segue destination="aOh-lX-lXp" kind="push" id="Drq-SE-ANv"/>
+                        <segue destination="aOh-lX-lXp" kind="push" identifier="toFlights" id="Drq-SE-ANv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zrK-ud-kSG" userLabel="First Responder" sceneMemberID="firstResponder"/>

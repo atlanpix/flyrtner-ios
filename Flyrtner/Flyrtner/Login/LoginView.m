@@ -11,6 +11,7 @@
 @interface LoginView (){
     AppDelegate *appDelegate;
     FlyrtnerApi *flyrtnerAPI;
+    NSDictionary<FBGraphUser> *userInfo;
 }
 
 @end
@@ -33,10 +34,13 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    AppCore *appCore = [[AppCore alloc] init];
+    appCore getUserId
+    
     fbLoginView = [[FBLoginView alloc] init];
     
     [LoginFacebookButton setLoginFacebookButton: fbLoginView InView:self.view
-                                         in:CGRectMake(100, 130, 217, 40)
+                                         in:CGRectMake(52, 300, 217, 40)
                            withDefaultImage:@"loginFacebook.png"
                         andHighlightedImage:@"loginFacebook-pushed.png"
                                   withLabel:nil];
@@ -50,8 +54,6 @@
 }
 
 #pragma mark - Metodos para el login de facebook
-
-
 - (void)loginViewFetchedUserInfo:(FBLoginView *)loginView
                             user:(id<FBGraphUser>)user {
 	if (![[NSUserDefaults standardUserDefaults] boolForKey:LOGGED_FACEBOOK]){
@@ -62,16 +64,14 @@
 			 if (!error) {
 				 
 				 // Guardamos el nombre de usuario
-				 
 				 flyrtnerAPI = [[FlyrtnerApi alloc]init];
-				 
 				 
 				 if ([[NSUserDefaults standardUserDefaults] boolForKey:LOGGED_FACEBOOK_BACKEND]){
 					 // TODO: IR A LA OTRA VENTANA
+                     [self performSegueWithIdentifier:@"toLogin" sender:self];
 				 }
 				 else{
 					 NSDictionary *json = [NSDictionary dictionaryWithObjectsAndKeys:
-										   
 										   [user valueForKey:@"id"], @"idFacebook",
 										   [user valueForKey:@"email"], @"email",
 										   [user valueForKey:@"username"], @"usernameFB",
@@ -90,9 +90,11 @@
 				 [[NSUserDefaults standardUserDefaults] setObject:user forKey:FACEBOOK_PROFILE];
 				 [[NSUserDefaults standardUserDefaults] setObject:[user valueForKey:@"name"] forKey:PROFILE_NAME];
 				 
-				 fbLoginView.hidden=YES;
+				 //fbLoginView.hidden=YES;
 				 [[NSUserDefaults standardUserDefaults] setBool:YES forKey:LOGGED_FACEBOOK];
 				 [[NSUserDefaults standardUserDefaults] synchronize];
+                 
+                 userInfo = user;
 				 
 			 }
 		 }];
@@ -103,11 +105,20 @@
 	}
 }
 
--(void)returnLoginFacebook:(NSString *) response{
+-(void)returnLoginFacebook:(NSDictionary *) response{
 	
 	[[NSUserDefaults standardUserDefaults] setBool:YES forKey:LOGGED_FACEBOOK_BACKEND];
-	[[NSUserDefaults standardUserDefaults] setObject:response forKey:USER_ID];
+    NSString *userId = [response objectForKey:@"user_id"];
+	[[NSUserDefaults standardUserDefaults] setObject:userId forKey:USER_ID];
 	[[NSUserDefaults standardUserDefaults] synchronize];
+    
+    [LoginFacebookButton setLoginFacebookButton: fbLoginView InView:self.view
+                                             in:CGRectMake(52, 300, 217, 40)
+                               withDefaultImage:@"loginFacebook-logout.png"
+                            andHighlightedImage:@"loginFacebook-logout-pushed.png"
+                                      withLabel:nil];
+    
+    [self performSegueWithIdentifier:@"toFlights" sender:self];
 }
 
 @end

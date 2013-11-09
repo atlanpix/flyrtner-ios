@@ -33,6 +33,12 @@
 		E5134BC1182DCB1F00805F33 /* AppCore.m in Sources */ = {isa = PBXBuildFile; fileRef = E5134BC0182DCB1F00805F33 /* AppCore.m */; };
 		E5134BC4182DCB2C00805F33 /* loginFacebook-pushed.png in Resources */ = {isa = PBXBuildFile; fileRef = E5134BC2182DCB2C00805F33 /* loginFacebook-pushed.png */; };
 		E5134BC5182DCB2C00805F33 /* loginFacebook.png in Resources */ = {isa = PBXBuildFile; fileRef = E5134BC3182DCB2C00805F33 /* loginFacebook.png */; };
+		E5134BCC182DD86B00805F33 /* loginFacebook-logout-pushed.png in Resources */ = {isa = PBXBuildFile; fileRef = E5134BC6182DD86B00805F33 /* loginFacebook-logout-pushed.png */; };
+		E5134BCD182DD86B00805F33 /* loginFacebook-logout-pushed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5134BC7182DD86B00805F33 /* loginFacebook-logout-pushed@2x.png */; };
+		E5134BCE182DD86B00805F33 /* loginFacebook-logout.png in Resources */ = {isa = PBXBuildFile; fileRef = E5134BC8182DD86B00805F33 /* loginFacebook-logout.png */; };
+		E5134BCF182DD86B00805F33 /* loginFacebook-logout@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5134BC9182DD86B00805F33 /* loginFacebook-logout@2x.png */; };
+		E5134BD0182DD86B00805F33 /* loginFacebook-pushed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5134BCA182DD86B00805F33 /* loginFacebook-pushed@2x.png */; };
+		E5134BD1182DD86B00805F33 /* loginFacebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E5134BCB182DD86B00805F33 /* loginFacebook@2x.png */; };
 		E5192F34182D66FB00FD21A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5192F33182D66FB00FD21A8 /* Foundation.framework */; };
 		E5192F36182D66FB00FD21A8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5192F35182D66FB00FD21A8 /* CoreGraphics.framework */; };
 		E5192F38182D66FB00FD21A8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5192F37182D66FB00FD21A8 /* UIKit.framework */; };
@@ -129,6 +135,12 @@
 		E5134BC0182DCB1F00805F33 /* AppCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppCore.m; path = Resources/Classes/AppCore.m; sourceTree = "<group>"; };
 		E5134BC2182DCB2C00805F33 /* loginFacebook-pushed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "loginFacebook-pushed.png"; path = "Resources/Images/loginFacebook-pushed.png"; sourceTree = "<group>"; };
 		E5134BC3182DCB2C00805F33 /* loginFacebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loginFacebook.png; path = Resources/Images/loginFacebook.png; sourceTree = "<group>"; };
+		E5134BC6182DD86B00805F33 /* loginFacebook-logout-pushed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "loginFacebook-logout-pushed.png"; path = "Resources/Images/loginFacebook-logout-pushed.png"; sourceTree = "<group>"; };
+		E5134BC7182DD86B00805F33 /* loginFacebook-logout-pushed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "loginFacebook-logout-pushed@2x.png"; path = "Resources/Images/loginFacebook-logout-pushed@2x.png"; sourceTree = "<group>"; };
+		E5134BC8182DD86B00805F33 /* loginFacebook-logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "loginFacebook-logout.png"; path = "Resources/Images/loginFacebook-logout.png"; sourceTree = "<group>"; };
+		E5134BC9182DD86B00805F33 /* loginFacebook-logout@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "loginFacebook-logout@2x.png"; path = "Resources/Images/loginFacebook-logout@2x.png"; sourceTree = "<group>"; };
+		E5134BCA182DD86B00805F33 /* loginFacebook-pushed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "loginFacebook-pushed@2x.png"; path = "Resources/Images/loginFacebook-pushed@2x.png"; sourceTree = "<group>"; };
+		E5134BCB182DD86B00805F33 /* loginFacebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "loginFacebook@2x.png"; path = "Resources/Images/loginFacebook@2x.png"; sourceTree = "<group>"; };
 		E5192F30182D66FB00FD21A8 /* Flyrtner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flyrtner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5192F33182D66FB00FD21A8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E5192F35182D66FB00FD21A8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -426,6 +438,12 @@
 		E5192F75182D6D4000FD21A8 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				E5134BC6182DD86B00805F33 /* loginFacebook-logout-pushed.png */,
+				E5134BC7182DD86B00805F33 /* loginFacebook-logout-pushed@2x.png */,
+				E5134BC8182DD86B00805F33 /* loginFacebook-logout.png */,
+				E5134BC9182DD86B00805F33 /* loginFacebook-logout@2x.png */,
+				E5134BCA182DD86B00805F33 /* loginFacebook-pushed@2x.png */,
+				E5134BCB182DD86B00805F33 /* loginFacebook@2x.png */,
 				E5134BC2182DCB2C00805F33 /* loginFacebook-pushed.png */,
 				E5134BC3182DCB2C00805F33 /* loginFacebook.png */,
 				E5192FDB182D98A300FD21A8 /* Icons */,
@@ -602,18 +620,24 @@
 			files = (
 				E5134BC4182DCB2C00805F33 /* loginFacebook-pushed.png in Resources */,
 				E5192FB9182D94B400FD21A8 /* person-anonymous.png in Resources */,
+				E5134BCC182DD86B00805F33 /* loginFacebook-logout-pushed.png in Resources */,
 				E5192FBA182D94B400FD21A8 /* pink.png in Resources */,
 				E5192FE1182D98B700FD21A8 /* icon-taxi.png in Resources */,
+				E5134BD0182DD86B00805F33 /* loginFacebook-pushed@2x.png in Resources */,
 				E5192F40182D66FB00FD21A8 /* InfoPlist.strings in Resources */,
 				E5192FE9182D9A4F00FD21A8 /* icon-chat@2x.png in Resources */,
 				E5192F69182D67DE00FD21A8 /* Flyrtner.storyboard in Resources */,
 				E5192F4B182D66FB00FD21A8 /* Images.xcassets in Resources */,
 				E5192FBE182D950600FD21A8 /* white.png in Resources */,
 				E5192FDF182D98B700FD21A8 /* icon-chat.png in Resources */,
+				E5134BCE182DD86B00805F33 /* loginFacebook-logout.png in Resources */,
 				E5192FEB182D9A4F00FD21A8 /* icon-taxi@2x.png in Resources */,
 				E5192FBD182D950600FD21A8 /* black.png in Resources */,
 				E5134BC5182DCB2C00805F33 /* loginFacebook.png in Resources */,
 				E5192FEA182D9A4F00FD21A8 /* icon-people@2x.png in Resources */,
+				E5134BD1182DD86B00805F33 /* loginFacebook@2x.png in Resources */,
+				E5134BCF182DD86B00805F33 /* loginFacebook-logout@2x.png in Resources */,
+				E5134BCD182DD86B00805F33 /* loginFacebook-logout-pushed@2x.png in Resources */,
 				E5192FE0182D98B700FD21A8 /* icon-people.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

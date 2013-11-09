@@ -23,6 +23,8 @@ NSString *const USER_ID = @"userId";
 
 NSString *const URL_API = @"http://54.194.16.103:9000";
 
+NSString *const URL_API_CHAT = @"54.194.16.103:9000";
+
 @implementation Definitions
 
 @end

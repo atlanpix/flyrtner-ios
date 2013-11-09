@@ -216,8 +216,8 @@
     [_webSocket close];
     
     NSString *userId = [[NSUserDefaults standardUserDefaults]objectForKey:USER_ID];
-    NSString *username = [[NSUserDefaults standardUserDefaults]objectForKey:@"username"];
-    NSString *url = [NSString stringWithFormat:@"ws://%@/room/chat?username=%@&userId=%@&pid=%@&typeChat=%@",URL_API,username,userId,room,@"2"];
+    NSString *username = [[NSUserDefaults standardUserDefaults]objectForKey:PROFILE_NAME];
+    NSString *url = [NSString stringWithFormat:@"ws://%@/room/chat?username=%@&userId=%@&pid=%@&typeChat=%@",URL_API_CHAT,username,userId,flight.flightNumber,@"2"];
     
     NSLog(url);
     
@@ -275,18 +275,6 @@
         // Get information from segue
         person = [infoSegue objectForKey:@"PERSON"]; // Person to talk
         flight = [infoSegue objectForKey:@"FLIGHT"];   // Program info
-        
-        NSString *userId = [[NSUserDefaults standardUserDefaults]objectForKey:USER_ID];
-        NSArray *users = [NSArray arrayWithObjects:person.userId, nil];
-        NSDictionary *json = [NSDictionary dictionaryWithObjectsAndKeys:
-                              userId, @"userCreate",
-                              users, @"users",
-                              nil];
-        
-        ChatApi *chatApi = [[ChatApi alloc] init];
-        [chatApi roomCreate:json calledBy:self
-                withSuccess:@selector(roomCreateDidEnd:)
-                 andFailure:@selector(roomCreateDidEndWithFailure:)];
     } else {
         // Si no estas logueado
         //[self performSegueWithIdentifier:@"toLogin" sender:self];

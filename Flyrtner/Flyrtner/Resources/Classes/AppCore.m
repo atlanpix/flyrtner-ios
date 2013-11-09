@@ -1,9 +1,9 @@
 //
 //  AppCore.m
-//  Vuqio
+//  Flyrtner
 //
-//  Created by Enrique Mendoza Robaina on 07/11/13.
-//  Copyright (c) 2013 Buqio SL. All rights reserved.
+//  Created by Enrique Mendoza Robaina on 09/11/13.
+//  Copyright (c) 2013 Cabeza la Vaca. All rights reserved.
 //
 
 #import "AppCore.h"

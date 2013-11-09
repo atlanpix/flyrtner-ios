@@ -38,6 +38,7 @@
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"HasLaunchedOnce"];
 		[[NSUserDefaults standardUserDefaults] setBool:NO forKey:LOGGED_FACEBOOK];
 		[[NSUserDefaults standardUserDefaults] setBool:NO forKey:LOGGED_FACEBOOK_BACKEND];
+        [[NSUserDefaults standardUserDefaults] setObject:@"false" forKey:@"deviceToken"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         // This is the first launch ever
     }
@@ -193,7 +194,7 @@
          annotation:(id)annotation {
     // attempt to extract a token from the url
     
-    // PARA EL LOGIN FEO
+    // PARA EL LOGIN FEO   //siiiii
     return [FBAppCall handleOpenURL:url
                   sourceApplication:sourceApplication
                         withSession:self.session];
