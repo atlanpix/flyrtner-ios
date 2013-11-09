@@ -12,10 +12,13 @@
 #import "DBTaxiManager.h"
 #import "Taxi.h"
 
-@interface TaxiView : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface TaxiView : UIViewController<UITableViewDataSource,UITableViewDelegate,NSURLConnectionDataDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (strong, nonatomic) NSDictionary *infoSegue;
+- (IBAction)addTaxi:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *number;
+@property (weak, nonatomic) IBOutlet UITextField *address;
 
 @end

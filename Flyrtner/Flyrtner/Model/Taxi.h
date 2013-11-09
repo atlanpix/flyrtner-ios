@@ -15,5 +15,7 @@
 @property NSMutableArray *people;
 @property NSString *description;
 @property NSString *creatorId;
+@property NSString *numberPeople;
+@property NSString *taxiId;
 
 @end

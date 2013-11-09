@@ -10,6 +10,6 @@
 
 @implementation Taxi
 
-@synthesize address, flightNumber, people, description, creatorId;
+@synthesize address, flightNumber, people, description, creatorId, numberPeople, taxiId;
 
 @end

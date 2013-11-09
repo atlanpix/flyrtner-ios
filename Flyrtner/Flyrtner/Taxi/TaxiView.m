@@ -12,11 +12,20 @@
     FlyrtnerApi *flyrtnerAPI;
     NSMutableArray *taxis;
     DBTaxiManager *dbTaxiManager;
+    Flight *flight;
+    NSString *userId;
 }
 
 @end
 
 @implementation TaxiView
+
+@synthesize address, number, tableView;
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    return [textField resignFirstResponder];
+    //return [number resignFirstResponder];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,6 +40,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [address setDelegate:self];
+    [number setDelegate:self];
+    
+    [tableView setDataSource:self];
+	[tableView setDelegate:self];
+    
+    taxis = [[NSMutableArray alloc] init];
 }
 
 - (void)didReceiveMemoryWarning
@@ -86,4 +102,52 @@
 
 #pragma mark -
 
+- (IBAction)addTaxi:(id)sender {
+    AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    flight = delegate.flight;
+    AppCore *appCore = [[AppCore alloc] init];
+    userId = [appCore getUserId];
+    
+    NSDictionary *infoTaxi = [NSDictionary dictionaryWithObjectsAndKeys:
+                              flight.flightId,@"fly_id",
+                              address.text,@"address",
+                              number.text,@"numberSit",
+                              userId,@"userCreate", nil];
+    
+    flyrtnerAPI = [[FlyrtnerApi alloc] init];
+    [flyrtnerAPI createTaxi:infoTaxi calledBy:self withSuccess:@selector(createTaxiDidEnd:)];
+    [number resignFirstResponder];
+    [address resignFirstResponder];
+}
+
+-(void)createTaxiDidEnd:(id)response{
+    NSLog(@"createTaxiDidEnd");
+    
+    Taxi *taxi = [[Taxi alloc] init];
+    taxi.address = address.text;
+    taxi.numberPeople = number.text;
+    taxi.flightNumber = flight.flightNumber;
+    taxi.creatorId = userId;
+    taxi.taxiId = [response objectForKey:@"id"];
+    
+    address.text = @"";
+    number.text = @"1";
+    
+    [taxis addObject:taxi];
+    
+    [self.tableView reloadData];
+}
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
