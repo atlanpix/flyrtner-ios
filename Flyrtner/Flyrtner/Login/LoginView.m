@@ -124,4 +124,8 @@
     [self performSegueWithIdentifier:@"toFlights" sender:self];
 }
 
+- (void) defaultFailureCallback
+{
+    NSLog(@"Failure");
+}
 @end

@@ -40,6 +40,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    flight = delegate.flight;
+    AppCore *appCore = [[AppCore alloc] init];
+    userId = [appCore getUserId];
+    flyrtnerAPI = [[FlyrtnerApi alloc] init];
+    
+    [flyrtnerAPI getTaxis:flight.flightId calledBy:self withSuccess:@selector(getTaxisDidEnd:)];
     [address setDelegate:self];
     [number setDelegate:self];
     
@@ -80,21 +87,7 @@
     Taxi *taxi = [taxis objectAtIndex:indexPath.row];
     
     cell.address.text = taxi.address;
-    
-    //    [cell.channelImage setImageWithURL:[NSURL URLWithString:c.imageURL]
-    //                      placeholderImage:[UIImage imageNamed:[c.imageURL
-    //                                                            stringByReplacingOccurrencesOfString:@"http://estrelladamm.vuqio.com/static/channels/p/" withString:@""]]
-    //                             completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
-    //                                 //... completion code here ...
-    //                             }];
-    //    NSString *userId = [appCore getUserId];
-    //    if (userId){
-    //        [flyrtnerAPI getUsersFlight:flight.flightNumber
-    //                             userId:userId
-    //                               view:cell
-    //                           calledBy:self
-    //                        withSuccess:@selector(getUsersFlight:view:)];
-    //    }
+    cell.people.text = taxi.numberPeople;
     
     return cell;
 }
@@ -103,18 +96,13 @@
 #pragma mark -
 
 - (IBAction)addTaxi:(id)sender {
-    AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    flight = delegate.flight;
-    AppCore *appCore = [[AppCore alloc] init];
-    userId = [appCore getUserId];
-    
     NSDictionary *infoTaxi = [NSDictionary dictionaryWithObjectsAndKeys:
                               flight.flightId,@"fly_id",
                               address.text,@"address",
                               number.text,@"numberSit",
                               userId,@"userCreate", nil];
     
-    flyrtnerAPI = [[FlyrtnerApi alloc] init];
+    
     [flyrtnerAPI createTaxi:infoTaxi calledBy:self withSuccess:@selector(createTaxiDidEnd:)];
     [number resignFirstResponder];
     [address resignFirstResponder];
@@ -136,6 +124,27 @@
     [taxis addObject:taxi];
     
     [self.tableView reloadData];
+}
+
+-(void)getTaxisDidEnd:(id)response{
+    NSLog(@"getTaxisDidEnd");
+    for (NSDictionary *obj in response){
+        Taxi *taxi = [[Taxi alloc] init];
+        taxi.address = [obj objectForKey:@"address"];
+        taxi.numberPeople = [obj objectForKey:@"numberSit"];
+        
+        if (taxis == nil){
+            taxis = [[NSMutableArray alloc] init];
+        }
+        [taxis addObject:taxi];
+    }
+    
+    [self.tableView reloadData];
+}
+
+- (void) defaultFailureCallback
+{
+    NSLog(@"Failure");
 }
 @end
 

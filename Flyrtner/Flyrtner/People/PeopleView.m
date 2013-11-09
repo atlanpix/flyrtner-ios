@@ -151,4 +151,8 @@
     
 }
 
+- (void) defaultFailureCallback
+{
+    NSLog(@"Failure");
+}
 @end

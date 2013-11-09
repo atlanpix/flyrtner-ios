@@ -217,5 +217,9 @@
     [self.flightTable reloadData];
 }
 
+- (void) defaultFailureCallback
+{
+    NSLog(@"Failure");
+}
 #pragma mark -
 @end

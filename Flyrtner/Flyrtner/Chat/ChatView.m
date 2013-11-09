@@ -355,7 +355,7 @@
 
 - (void) animateTextField: (UITextField*) textField up: (BOOL)up
 {
-    const int movementDistance = PIXELES;
+    const int movementDistance = 170;
     const float movementDuration = 0.3f;
     int movement = (up ? -movementDistance : movementDistance);
     
@@ -370,8 +370,8 @@
 - (IBAction)goingUp:(id)sender {
     [self animateTextField:inputText up:TRUE];
     CGRect rect = self.tableView.frame;
-    rect.size.height = rect.size.height - PIXELES;//218
-    rect.origin.y = rect.origin.y + PIXELES;
+    rect.size.height = rect.size.height - 170;//218
+    rect.origin.y = rect.origin.y + 170;
     self.tableView.frame = rect;
     clickOnInput = TRUE;
     [self scrollBottom];
@@ -458,7 +458,7 @@
     if (clickOnInput){
         [self animateTextField:inputText up:FALSE];
         CGRect rect = self.tableView.frame;
-        rect.size.height = rect.size.height + PIXELES;
+        rect.size.height = rect.size.height + 218;
         self.tableView.frame = rect;
         [inputText resignFirstResponder];
         clickOnInput = FALSE;
@@ -481,4 +481,8 @@
     return @"Últ. vez hoy a las 00:00";
 }
 
+- (void) defaultFailureCallback
+{
+    NSLog(@"Failure");
+}
 @end
